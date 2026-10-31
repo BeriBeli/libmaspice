@@ -40,7 +40,8 @@ published spice-swift 0.4.4 release.
 
 The layout follows selected conventions from [Ghostty at the recorded commit](https://github.com/ghostty-org/ghostty/tree/fbed180a5f181915c92a8f2f561903a6e4645b5a),
 adapted to a library. See [layout](docs/LAYOUT.md), [migration and contracts](docs/MIGRATION.md),
-[validation status](docs/STATUS.md), and [licenses](THIRD_PARTY_NOTICES.md).
+[roadmap](docs/ROADMAP.md), [validation status](docs/STATUS.md), and
+[licenses](THIRD_PARTY_NOTICES.md).
 
 - `src/`: production Zig core; `src/platform/apple/`: narrow native bridges;
   `src/build/`: build graph helpers.
