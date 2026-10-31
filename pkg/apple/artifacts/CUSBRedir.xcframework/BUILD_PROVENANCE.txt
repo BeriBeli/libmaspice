@@ -1,0 +1,7 @@
+usbredir source: https://www.spice-space.org/download/usbredir/usbredir-0.15.0.tar.xz
+usbredir SHA-256: 6dc2a380277688a068191245dac2ab7063a552999d8ac3ad8e841c10ff050961
+libusb source: https://github.com/libusb/libusb/releases/download/v1.0.30/libusb-1.0.30.tar.bz2
+libusb SHA-256: fea36f34f9156400209595e300840767ab1a385ede1dc7ee893015aea9c6dbaf
+Configuration: arm64; macOS=26.0; -O2; static; ac_cv_func_pipe2=no; deterministic archive
+Apple clang version 21.0.0 (clang-2100.4.1.1)
+Archive SHA-256: fc55cf29f2f04268f1a9fa3e480c09770416a056ee7817a9b32aa33238de2368

@@ -1,0 +1,54 @@
+{
+  "native_fingerprints_verified": 383,
+  "swift_tests": 727,
+  "swift_asan_tests": 727,
+  "swift_line_coverage_percent": 75.63,
+  "unchanged_coverage_floor": 62.0,
+  "maspice_tests": 55,
+  "session_logic_tests": 4,
+  "local_maspice_release": "assembled, native closure audited and ad-hoc signature verified",
+  "runtime": "Zig via CSpiceZig; legacy Swift core absent from product graph and linked consumer/Maspice symbols",
+  "not_claimed": [
+    "published release",
+    "fresh real SPICE peer/device interoperability",
+    "physical screen presentation",
+    "successful advanced-video hardware decode",
+    "clean macOS 26",
+    "notarization",
+    "performance gain"
+  ],
+  "package_sha256": {
+    "Package.swift": "1753028f330afd55279c1400b867c819a3efe735542d7f2faf671cb31155b892",
+    "Scripts/build-zig-native.sh": "d17880aa311a64f917ed05912619b6c4c6ce065ec6b2eb719d8b84fd1392094d",
+    "Scripts/validate-zig-package.sh": "28d49c14508ceb58b1f05283316adbe8e614918d672f320592105cf01659aeec",
+    "Scripts/verify-native-closure.sh": "f90f4f0a63bf17390cf64b474b82094ec979bdab5863293a97a5bd3bbc3e5ecf",
+    "Plugins/CompileMetalShaders/Plugin.swift": "d7aacc93b61a51cf3a1d3a3962b726cbe05e2aa5016227bf0e52df0fe0a8b9b5",
+    "Artifacts/CSpiceZig.xcframework/BUILD_PROVENANCE.txt": "a45e170186fc58aa2044cbd1d5a3919771b90de7e50d43c3e03a6fa7bf1be8ed",
+    "Artifacts/CSpiceZig.xcframework/macos-arm64/CSpiceZig.framework/Versions/A/CSpiceZig": "f09f0088109eaa12aec649e83f0e34a5a8c2bf83ceba436c215545517471b41b",
+    "../spice-mac/scripts/build-app.sh": "76eb568dbce5e2e17c7ea35726cd2950ebab41e951cf0cee66aa3c556166928a"
+  },
+  "log_sha256": {
+    "packaged-core-final.log": "e836b7974f6fc6343f5e8cf3fe08d9c0a3553816c593e5faffa0198c4d1f0d2b",
+    "swiftpm-all.log": "da148e5f84a55fe6044178c8d876b5a69f6d19db90fb5a325575bbea0132d7da",
+    "package-asan.log": "e6070c597d66dba66385856de1e7b3b0f09eee716363e1637277b8e9f82e7c87",
+    "package-coverage.log": "837ea806f1fc73633a4e19932be73b49e6a81017855294fd8c3e4c3d492774ef",
+    "package-integration.log": "969630429f1064b285a24c34656c898348f8e3e56faa9b553b5ac411398e9b08",
+    "public-package.log": "2137f39da339bd34f4e0e8d4e2c657404a2890faa8c2934285ac21e2637296d1",
+    "package-build-lib.log": "d44577b79ad6b0030cf75a7949b1ef50b0ce3055468ed08f5ddb38ba2d223959",
+    "packaged-analysis.log": "3f8c5da7a6413be267f82463d2971cf841cdee8f26e270ddd9d7109ebb445c10",
+    "package-doctor.log": "f794491880ce41e50f0c3fbf3abc74ac6204ce20c0ad50778237a4cf35d231cf"
+  },
+  "evidence_metadata_correction": "metadata-correction.json; historical runtime tests were not rerun",
+  "swift_coverage_scope": "727 tests / 75.63% primarily retained Swift reference/oracle modules plus Swift boundary; not Zig-core coverage",
+  "packaged_consumer_instrumentation": "SwiftPM Release; Swift/C/ObjC not sanitizer-instrumented; Zig ReleaseSafe",
+  "package_sha256_at_runtime_run": {
+    "Package.swift": "1753028f330afd55279c1400b867c819a3efe735542d7f2faf671cb31155b892",
+    "Scripts/build-zig-native.sh": "d17880aa311a64f917ed05912619b6c4c6ce065ec6b2eb719d8b84fd1392094d",
+    "Scripts/validate-zig-package.sh": "9014aa97547382015cf6e373127c2fe9b61a4f8d69e9175583d85e8e032825d8",
+    "Scripts/verify-native-closure.sh": "f90f4f0a63bf17390cf64b474b82094ec979bdab5863293a97a5bd3bbc3e5ecf",
+    "Plugins/CompileMetalShaders/Plugin.swift": "d7aacc93b61a51cf3a1d3a3962b726cbe05e2aa5016227bf0e52df0fe0a8b9b5",
+    "Artifacts/CSpiceZig.xcframework/BUILD_PROVENANCE.txt": "a45e170186fc58aa2044cbd1d5a3919771b90de7e50d43c3e03a6fa7bf1be8ed",
+    "Artifacts/CSpiceZig.xcframework/macos-arm64/CSpiceZig.framework/Versions/A/CSpiceZig": "f09f0088109eaa12aec649e83f0e34a5a8c2bf83ceba436c215545517471b41b",
+    "../spice-mac/scripts/build-app.sh": "76eb568dbce5e2e17c7ea35726cd2950ebab41e951cf0cee66aa3c556166928a"
+  }
+}

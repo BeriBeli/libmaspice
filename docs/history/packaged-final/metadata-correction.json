@@ -1,0 +1,82 @@
+{
+  "scope": "Evidence metadata only; no runtime changes or full-suite rerun",
+  "metadata_cases_checked": 18,
+  "syntax": "six shared Python reports and both shell drivers checked",
+  "existing_binary_symbols": "Release session consumer has no ASan/UBSan imports; dedicated Swift consumer has ASan imports and its native library has ASan/UBSan imports",
+  "source_changes": {
+    "Scripts/validate-zig-swift.sh": {
+      "before_sha256": "611ddfb6e310e7599ec779c1917b674c318f02f9d3d424bca3ec6344d8084746",
+      "after_sha256": "1bd549414290f78ccdf95262ff99cf1d488923a32b6f3cb7d699ec99ed6e8c5c"
+    },
+    "Scripts/validate-zig-package.sh": {
+      "before_sha256": "9014aa97547382015cf6e373127c2fe9b61a4f8d69e9175583d85e8e032825d8",
+      "after_sha256": "28d49c14508ceb58b1f05283316adbe8e614918d672f320592105cf01659aeec"
+    },
+    "Tests/SpiceZigTests/swift-agent-integration.py": {
+      "before_sha256": "778e245a9db94e7ae3db43f4b7e30c45df2da0eeb526d0ab8fa659e01663eb57",
+      "after_sha256": "0414cdac2f1348416b4a911b9af068e6a6890266a6714146410d7f3c68bee95b"
+    },
+    "Tests/SpiceZigTests/swift-usb-integration.py": {
+      "before_sha256": "dc2f9cfc0ab52ce3cd423148b34131f913aca57562e1f719ab6d2184421b2e22",
+      "after_sha256": "5787fe4b9e16a4508a8cef5448c5af6a6ecedd106de60a20d1f06deac40c66cd"
+    },
+    "Tests/SpiceZigTests/swift-session-integration.py": {
+      "before_sha256": "9899482766e5683ebdbb9cf3f795cbe056bc71f4ccf2c491eca5efd754fd9198",
+      "after_sha256": "61b114e77890ae70263c7894363faf41c64d6003deb45159a0c0bd01f1964c54"
+    },
+    "Tests/SpiceZigTests/swift-audio-integration.py": {
+      "before_sha256": "97cf17888cb2f6b5130f10e16640d7e121a2fbde0f8e963ae300470c68e14551",
+      "after_sha256": "383f6058a265f87dd1a324f6d4ea4737dce6c50394088cf71e59785f57214120"
+    },
+    "Tests/SpiceZigTests/swift-native-integration.py": {
+      "before_sha256": "02578c82314fdb4bdec3704cecf5b3c1078f9cb818a88c9e1b4544711485a67c",
+      "after_sha256": "7dd61ad664e447903f896794d1d63ba0471fc699507c8ae2d63ac15e90b358b0"
+    },
+    "Tests/SpiceZigTests/swift-webdav-integration.py": {
+      "before_sha256": "2d424674d0c03d3cf138912e0104011f72194a94eab94c33e142f85b407d3edc",
+      "after_sha256": "640587080be34fefcf23a5a7c02f0baf2880381a130189aa817541d517af72f5"
+    },
+    "Tests/SpiceZigTests/integration_metadata.py": {
+      "before_sha256": null,
+      "after_sha256": "03627608400dc70abfd2716adf53796243b812a3bb76615b042ced61f0018b26"
+    }
+  },
+  "corrected_release_reports": {
+    ".build/zig-package-consumers/agent.json": {
+      "before_sha256": "0b823228a3fffd5c69298cec63edb3a08f0e4a75bf00f9485782f0e32630d588",
+      "after_sha256": "eb6e7a88ff808dfb43d4f5fa7db911b09f099f705dbeff72ee9e8d089586de1a",
+      "original": ".build/zig-package-consumers/metadata-correction-originals/agent.json"
+    },
+    ".build/zig-package-consumers/audio.json": {
+      "before_sha256": "5e4b78f0b61fa1f2b73aa77a6ad97fc0ae700cfa59265107f4ecee94784be283",
+      "after_sha256": "6e0d707d789e854934c0d367edb1255500fe51973c39c33007f41619f2dcca7b",
+      "original": ".build/zig-package-consumers/metadata-correction-originals/audio.json"
+    },
+    ".build/zig-package-consumers/native.json": {
+      "before_sha256": "c2d11233d75fd0bed1bb1267e849c841612700b3f9b2bf9a1b1f149bbc73c123",
+      "after_sha256": "8db4b2054fb0228601d616ad88863604b61a75ec4fcaa0fccee36a67a94358f8",
+      "original": ".build/zig-package-consumers/metadata-correction-originals/native.json"
+    },
+    ".build/zig-package-consumers/session.json": {
+      "before_sha256": "e79e2e828d4c17b4e71db35d5f14c149b4bc13adc6e1c15752cc4fcda8a9896a",
+      "after_sha256": "ff16341842c1c4d8cb114f3fa3116a48eb633999ab9fe2410b32d07a45a9fc69",
+      "original": ".build/zig-package-consumers/metadata-correction-originals/session.json"
+    },
+    ".build/zig-package-consumers/usb.json": {
+      "before_sha256": "38c46d4b57a5944fbdbe64678b511a7bc496e9b192ac98109eec2c0db4b8f624",
+      "after_sha256": "3ca1ce025150587d5a73fc9b2286a46ff75a40ad424bfc97aa958f6ed48d1a31",
+      "original": ".build/zig-package-consumers/metadata-correction-originals/usb.json"
+    },
+    ".build/zig-package-consumers/webdav.json": {
+      "before_sha256": "328fa5c666690e0466286b4bb3e7abb6fbcac1a6cfd736697078dbc7cbac772e",
+      "after_sha256": "3d50ab318f2188ebdace0c0a76218465e08df2a6ce576c5da213633442759f4d",
+      "original": ".build/zig-package-consumers/metadata-correction-originals/webdav.json"
+    }
+  },
+  "historical_runtime_manifest": "validation.json (383 fingerprints at original runtime run; reporting-only edits below are later)",
+  "preserved_delivery_sha256": "3e221f2545213306915b744803b08aecfdb13c2179ad97bbeaa9e4ddff8e7302",
+  "unchanged_log_hashes": true,
+  "swift_coverage_scope": "727 tests / 75.63% primarily retained Swift reference/oracle modules plus Swift boundary; not Zig-core coverage",
+  "new_core_evidence": "Independent Zig tests, dedicated C ABI/Swift boundary tests and actual packaged consumers",
+  "external_gates": "Physical presentation, live peers/devices and distribution remain unpassed"
+}

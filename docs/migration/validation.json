@@ -1,0 +1,1694 @@
+{
+  "date": "2026-10-31",
+  "repository": "/Users/beribeli/Workarea/libmaspice",
+  "scope": "Unreleased production extraction; no remote, tag, publication or application editable-path switch",
+  "ghostty_reference": "fbed180a5f181915c92a8f2f561903a6e4645b5a",
+  "toolchain": {
+    "zig": "0.17.0",
+    "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0",
+    "xcode": "Xcode 27.2\nBuild version 27B52",
+    "host_os": "27.2",
+    "deployment_target": "arm64 macOS 26.0",
+    "optimization": "ReleaseSafe"
+  },
+  "old_repositories": [
+    {
+      "repository": "spice-swift",
+      "head_unchanged": true,
+      "git_status_unchanged": true
+    },
+    {
+      "repository": "spice-mac",
+      "head_unchanged": true,
+      "git_status_unchanged": true
+    }
+  ],
+  "imported_files": 538,
+  "production_generator_oracle_files_preserved": 292,
+  "only_imported_production_source_change": "codec_bridge.c QUIC include path; include/module.modulemap exposes the existing foundational header",
+  "new_build_composition": "src/lib.zig imports foundational, desktop and host ABIs once; prevents duplicate ticket export in mixed C consumers",
+  "native_aggregate_fingerprints_matched": 388,
+  "public_exports": {
+    "CSpiceZig": {
+      "original_public_exports": 307,
+      "new_public_exports": 364,
+      "missing": [],
+      "duplicates": []
+    },
+    "CSpiceQUIC": {
+      "original_public_exports": 11,
+      "new_public_exports": 11,
+      "missing": [],
+      "duplicates": []
+    }
+  },
+  "passed_commands": [
+    "tools/build-native-dependencies.sh (fresh checksum-pinned upstream dependencies)",
+    "zig build",
+    "zig build test",
+    "zig build check-native test-installed",
+    "zig build test-package",
+    "swift test --disable-sandbox --no-parallel -Xswiftc -warnings-as-errors",
+    "swift run --package-path test/PublicAPIConsumer --disable-sandbox PublicAPIConsumer",
+    "tools/validate-quic.sh",
+    "tools/validate-zig-video.sh (local hardware decoder fixtures only)",
+    "tools/validate-jpeg-simd.py --asan (explicit verified archive)",
+    "clean checkout zig build test-installed and Swift PublicAPIConsumer"
+  ],
+  "not_claimed": [
+    "Zig ASan instrumentation",
+    "SwiftPM Release sanitizer instrumentation",
+    "old 727 Swift tests or 75.63% as Zig coverage",
+    "physical screen/nonzero presentedTime",
+    "successful full advanced-video hardware path",
+    "real SPICE peer/live migration/physical devices",
+    "clean macOS 26",
+    "distribution signing/notarization",
+    "performance improvement"
+  ],
+  "clean_rebuild": {
+    "source": "Git index only; no .git or build cache copied; isolated Zig global cache",
+    "c_and_swift_consumers": "passed",
+    "cross_root_archive_bytes": "QUIC identical; core application and bridge object bytes identical; bundled compiler_rt.o differs. Whole-core cross-cache byte identity not claimed"
+  },
+  "whitespace_check": "11 imported baseline files have existing whitespace notices; original bytes verified; new build/tooling code passes",
+  "artifacts": {
+    "CUSBRedir": {
+      "archive_sha256": "fc55cf29f2f04268f1a9fa3e480c09770416a056ee7817a9b32aa33238de2368",
+      "provenance_sha256": "18a95faf87a0734ad6ec10509813b22aa67c00525406fa26b6201506a19f2ae8"
+    },
+    "CTurboJPEG": {
+      "archive_sha256": "7ffa3ac81c4e24781d21a7f481cc61bc079b00be26d4cb0a129f90f0033521e1",
+      "provenance_sha256": "4b547475628756b67d554a93d2302ce9b242ad4ec846476628cd58c7e0db6daa"
+    },
+    "CSpiceZig": {
+      "archive_sha256": "bf161dc1ea17d49501672d7ae169a038b05d29cd6a225d93f986ccf696ec06c7",
+      "provenance_sha256": "befc33bc55d60fcb12dff2d0d4e10a078d34837d4149c4546d1773c5eaf790cc"
+    },
+    "CSpiceQUIC": {
+      "archive_sha256": "ffd06e08f7f62fac7176aa9427715b6843b80221604429136c26b51417c2e43c",
+      "provenance_sha256": "2beb0637fcf3336ef2e6ffe46e26a45b656c42ee183dfba5a13daa2ad3e0685a"
+    }
+  },
+  "source_sha256": {
+    "LICENSE": "571fef109adb0bb29c50cadf6ce07345e73377da7f3ad50fd4799e2d08374302",
+    "Package.swift": "69829f552dc3876b245808b4b1737568a1fc226338f36df963c7dfe6cb7f7f89",
+    "THIRD_PARTY_NOTICES.md": "44984621571edec77f45ba37f698b0841501eea91a3e17edd9748e3640a28569",
+    "bindings/swift/Plugins/CompileMetalShaders/Plugin.swift": "0a3d50c09e9c2d8b8b50c16762e244e483196bc6c179e546b1484882908ac466",
+    "bindings/swift/Plugins/CompileMetalShaders/compile-metal.sh": "76863b4e1bfbe43f935a2eb0dfb7eb78c40e2aaf141bdb1588e400cca640ab0d",
+    "bindings/swift/SpiceZigSwift/SpiceAgentEventMailbox.swift": "464e12a9f7d1446dae7a94efb79cc5b80d0f00b195cf04a5593498952b1fd478",
+    "bindings/swift/SpiceZigSwift/SpiceAgentLease.swift": "31d157a47a6cb6076b4a4e040bdd4030b1eadb56795ece4d3342e2ef97023bbe",
+    "bindings/swift/SpiceZigSwift/SpiceAgentManager.swift": "33fd1c194010ece980094423efe81cba74d255a5631f16414ae2e2d34eb3414d",
+    "bindings/swift/SpiceZigSwift/SpiceAudioCaptureSource.swift": "d479e5c4d634f8bb87293e128a0df08ca15d5f26a7cdd1158093ef35ed44c4fa",
+    "bindings/swift/SpiceZigSwift/SpiceAudioLease.swift": "ac1d938d2c030a81ba6534e2da4a998f0761622f99612a8f59cc01d5c8f30644",
+    "bindings/swift/SpiceZigSwift/SpiceAudioPlaybackSink.swift": "573a108dac330385fc250841d160517bcca222ca705a72c237888cea2cfd7355",
+    "bindings/swift/SpiceZigSwift/SpiceClipboardTypes.swift": "a2a63c4c5f5aadbda4f17f4b11a833df77a97124ed0a6ecd25f579a0b0b3d0cc",
+    "bindings/swift/SpiceZigSwift/SpiceDesktopSource.swift": "ceae6b61220275254d89cf92b4045274813b2d64892bec0cc54d7e95d383bb82",
+    "bindings/swift/SpiceZigSwift/SpiceDesktopTypes.swift": "7f1e2ab671c006d3e43d97747ae9fc0c73871c926e7ba90bc9eae67ecbb59009",
+    "bindings/swift/SpiceZigSwift/SpiceDesktopView.swift": "2c6bd9145dee794cc28de4e72b5096233aea36665efa016dc523ca9eaea05052",
+    "bindings/swift/SpiceZigSwift/SpiceDisplayConfiguration.swift": "855f0d5abc9a9b546717805269c9b9f3a5f77caf9c8fc986a8ece8bf7712150b",
+    "bindings/swift/SpiceZigSwift/SpiceEventBridge.swift": "516ea8df9f7c602dbb9d4999e27c6b1b5c7931ba486ad702d242b0e02fada055",
+    "bindings/swift/SpiceZigSwift/SpiceFileTransfer.swift": "7e381be7df2b29bb319bda2bde1de83e3e1d23eebde801326e2a4ca124c94c44",
+    "bindings/swift/SpiceZigSwift/SpiceFrame.swift": "5d2b9c4c3f9bff56e45111892a1bb99f0e31f594c5e65bb21d9e5952be3cd09c",
+    "bindings/swift/SpiceZigSwift/SpiceMigration.swift": "a4b2b084ec8a8518a4791bce06763f5b68c8fd624bd729ddd40763fe20e7a36a",
+    "bindings/swift/SpiceZigSwift/SpiceOffscreenSurface.swift": "b7a686a654c2126d78f040a339312a5ef23f8bddf0736eaf240c0da322abcaf5",
+    "bindings/swift/SpiceZigSwift/SpicePasteboardBridge.swift": "0e8a0f7f7cf5e813e278c1749264e3c5f6dccfadc21c2b9c5a4e82cd93e8a2b6",
+    "bindings/swift/SpiceZigSwift/SpicePresentationDiagnostics.swift": "1b69a31c5b884cf45ddc50fa958a298989af754ce5293dfd72ee946c424c0c7c",
+    "bindings/swift/SpiceZigSwift/SpiceResources.swift": "1a9bff4e5570d0fb2545a6218fd74fe0fb662bf7658d9bdd15affddd292d277d",
+    "bindings/swift/SpiceZigSwift/SpiceRuntimeBridge.swift": "e878754423aa5e883b7d9c5ae9866298891bb6b9b1c0d68361df73ac40e1eb36",
+    "bindings/swift/SpiceZigSwift/SpiceSession.swift": "ca38e49897ac6cc711bade26e071bec7bde2d09c7ee1bd984744e5fe043b33f1",
+    "bindings/swift/SpiceZigSwift/SpiceSessionDiagnostics.swift": "9361639b69d8c2d12c9d594fbd3bde719e6a75f5ad6adf40fb9e46fd5bc15479",
+    "bindings/swift/SpiceZigSwift/SpiceSessionEvent.swift": "ceb6b6b90c11136c75a6fce44daebdaa19ce9406dabd3b6e963dfb3c9c9bb242",
+    "bindings/swift/SpiceZigSwift/SpiceSessionEventMailbox.swift": "10e7a2e13b1cf5a2166349f8be70189ad3a4eec1555da01374a381a77eed891b",
+    "bindings/swift/SpiceZigSwift/SpiceSessionTypes.swift": "915ddfd7c5f0d3ea7ff1b5dfbe2a3bc7eed779d9082db563cc8c1e404a5cd60b",
+    "bindings/swift/SpiceZigSwift/SpiceTimingSummary.swift": "48f14d20dfa33ecb71280a94c30c4ce37727f5dda956137f4c32d2e3f4b7eefd",
+    "bindings/swift/SpiceZigSwift/SpiceUSBRedirectionHost.swift": "1bafd1a22f5190fb66a90716ad861fe56a3faa6839831ac86da6e7c203d5a7e6",
+    "bindings/swift/SpiceZigSwift/SpiceWebDAVServer.swift": "063fc8b0223e55edd2080a404e8d05eb7c14b4e5f30f290b4c93b7e9cfb8e9f5",
+    "bindings/swift/SpiceZigSwift/SwiftSpice.swift": "1c527c19b2e0e93f014f647709c485147926d62ea9020c9761a5c622b18db522",
+    "build.zig": "267ae5ef35a517a6e37963862b473375c81644023a22fb08a0e9acfb981faceb",
+    "build.zig.zon": "2f5d9954c4f6a2c9fd25a3e16de657fb0ff5eb4509e53e6aa93d4b7a4f1622bd",
+    "include/audio_bridge.h": "f52559b6e7af73d4241aa031029c44aa145d08d97f3faea1df531c2debe0409b",
+    "include/graphics_bridge.h": "3c25d08ab9d4ceef5104f1df0e09eade45e2bcf6933a5f156401c2f9dde7ada3",
+    "include/host_view_bridge.h": "1dedb07e4c33ea0efb73b9ebb76d95e306fd02b760dd928099eda866a821764a",
+    "include/module.modulemap": "c05ecf8164b8ea565a6c445839c6b9cbd320c03c30a9d95bcdce4ca41963e9eb",
+    "include/network_bridge.h": "dee9913cd470fe29a4d72d970ed1da105a32ec426979706aebd7f2b9c323495c",
+    "include/pasteboard_bridge.h": "84a689c56cc31f8bf79b1922084fba339dc28d935841e7cf92c97ec2fbb52709",
+    "include/spice_zig.h": "f9ec65e334756d93702948fbce11f6659a18aea2af86f852f2a510a70657d241",
+    "include/spice_zig_agent.h": "758e68ea933444b51697aa93edb4aadf0d707473050e584f723cb3c1d6052b9d",
+    "include/spice_zig_audio.h": "047e7d7a54e5958ed15592e9e6a8996ca5858b9742c575913bb2cd3c1fe61ae7",
+    "include/spice_zig_desktop.h": "76b18ba68ea00a63095a8797c80ea00ef79403d9c3c7c60bbef7e5b6376da9e9",
+    "include/spice_zig_diagnostics.h": "fde10c4df44ea2b6da503446c468117e287b3dde2c83ba9ee50d66c15f3466ca",
+    "include/spice_zig_host_view.h": "5dc3e1968eb4232adeb87d898137b90d54e2ce295f842d05fb55645072606225",
+    "include/spice_zig_pipeline.h": "48dfee83f4624cfd5262b23eb3c3eba1cf36011b0bdddc08e96927c5c25a9ebe",
+    "include/spice_zig_source.h": "e5af1e5d1c71517515273915ab73505bb4759508171f596f1852cc88c71151a9",
+    "include/spice_zig_usb.h": "23bd93b58f0a9c4412b762150b3c97b727de91eb1cd97fe1784e35e69246db29",
+    "include/spice_zig_webdav.h": "f68239ba56c806ef0f725fb27551f108eb092246b53f4b2b5a9ba7284a38e116",
+    "include/video_bridge.h": "f669e299eb06fcf1f9fab84d5b0595b1230591aae8fd46fbbd07e004b7b51a56",
+    "include/webdav_bridge.h": "6b43fb3c1f19b12f957d840db79e0c63e8d65177c40ee923003052aeb275eccf",
+    "pkg/jpeg/module.modulemap": "d71945d13b8bca60b5966445cda1d5061fa1c52e02a00010b7767fb6dccaf0f0",
+    "pkg/jpeg/shim.h": "17e3dd93375fb9e87c2d738b12e0dd8bd19dc5f09eff1e62db17352891a6037f",
+    "pkg/quic/COPYING": "592987e8510228d546540b84a22444bde98e48d03078d3b2eefcd889bec5ce8c",
+    "pkg/quic/README.md": "903d64507cc4a51c8666df14143c89d1a38e8df6f6ca8529c83a0b1b64cac63e",
+    "pkg/quic/ZIG-LICENSE": "5c537d6853e005298a285d508cff9ac7192cea23576c840d485b2b586a7ff177",
+    "pkg/quic/abi.zig": "03108e6d2023e1b300040dae704d879d450e92fbd9f0abd8ca5f531f245c8762",
+    "pkg/quic/adapter.c": "daf965f2ce05696f6e8eade67e942767d5f05bdd8bb1b764d1187f4532a2b7d0",
+    "pkg/quic/codec.zig": "bcaf518a4d09e08a22b377f7e630560b57577963b436180c89f671fee6d024a5",
+    "pkg/quic/experiment.zig": "da4bde015345ba362d35a3ae24d4ad68f731c4227847f633d029b0a931134f06",
+    "pkg/quic/quic.h": "aba5d64f715eadbc0411bdc86c506b1faaf8b0a411c19325d099eebb4d958eeb",
+    "pkg/quic/random.zig": "274e6e3a75236f1c0d6a79689310e10ee707601a785511de45d41b34db4195a6",
+    "pkg/quic/shim.h": "c9f039d7f58fa0f84a104ff15a682c506dbb022734a8d7347e379e3fceb9168c",
+    "resources/protocol/spice-0.14.5.json": "d946ee1cf5fa80f4dffe8605287bb4af511d3fb0efa834c73b6701723071af4c",
+    "resources/shaders/compositor.metal": "0db284356f05ab612e36f004285f64633f701bb55c9d8d0fdcf62ffe1e550bcb",
+    "resources/shaders/presentation.metal": "a8db0205876b1469b7e13e335a7bcf5b934dbbcfa24bedbe46ff8e1c1a53b28d",
+    "src/abi.zig": "bda36abe93b8ac9233a35774b005f507c48a32a6f0b9047cdd280c349952745d",
+    "src/agent.zig": "e679ceda73ad0525293556d053f2c84f09cd0d2170e37a51564a1730971cbe57",
+    "src/agent_abi.zig": "16a359367483baad3ff6237ab32e4bde8ad28e8edeecf18b783fc1f2ebe4bab5",
+    "src/agent_manager.zig": "91709b90a3f1b7cdc0aaa3bae07d126b0f01a897197921b985afb8666bb065a2",
+    "src/agent_metrics.zig": "8b213cde1fec389e137869108652861111221aab11b92edc1a0e475d8a1d742a",
+    "src/agent_route.zig": "a84c392f936139c7a63c298243e93e2c81ac5ea9fb430720ad53cc5c72079330",
+    "src/agent_route_abi.zig": "f80f8d31daaec1014e8cc5da928ea6594b3b200a3241218ef2da60a2f56ccc12",
+    "src/agent_runner.zig": "d0dec8fe9f5f3e96832b2b4863ac7e965865dc8bfe14dec9a3442439f291f91f",
+    "src/agent_runner_abi.zig": "4ecd65ed4d4f89c7879c49569d14bf968b2f556f54ced3f7cc8445c874db1477",
+    "src/agent_services_wire.zig": "f81603f76b21e8a179f57f7cd4af6836fd2988c98a480f8edb2bb742ee5f4416",
+    "src/agent_session.zig": "9c117c6357cfb6860b33da06ca9eb16fbf026f97ff64b80caab238ce049b08cf",
+    "src/annexb.zig": "947ab51d8f44e8c682907902b63adb989b1096caedac59795be49541b6db25de",
+    "src/audio.zig": "027704417b38c11455dd626b33a1c6ef46f8b46043516ae66c9819ad270bbe80",
+    "src/audio_abi.zig": "8a93724c630867e5cda24febb7c00f0c46b6de1612f5349b6e48bed3de90a2bd",
+    "src/audio_buffer.zig": "3c4a83aaed9854d4e5842ed5e6656f2b6eba9e9cfc5c2f51a6be3a1cf0edf93b",
+    "src/audio_native.zig": "104ffad608c964527d08a949741d664e2cfe45fc2dd9c74b979f5732479578d3",
+    "src/audio_ring.zig": "b374c598fa50a6cbc264c03ce961f25a079f94f8723b0df643b9818a1afcf8b1",
+    "src/audio_route.zig": "6551ae4b596f2703b1409ff6717861f539f1afaf24d04a78459193dfa1891cde",
+    "src/audio_route_abi.zig": "6943fc5ce5f84f2cdef30af5c426c8fbb526e5bf729a52c0c48e3a023df611f4",
+    "src/audio_runner.zig": "67c55522b91fa708ef5b0cda842d263fcdd67a929002452124656ea414bbc4dc",
+    "src/audio_send.zig": "3dfb77e4174c8e65901867e80d8e16f87ac93df14c62b182b5d572eebcef0261",
+    "src/audio_wire.zig": "6655602d94b92413d7ab224d0bcfce7f77376571552e72dce1c071965a011640",
+    "src/barrier.zig": "65a0055e0dec05fc2c85e62995c601df9fe3453487cf9b1ceb5d8e8fb9bcba29",
+    "src/build/apple.zig": "4e38b2b8b13db7331084e35723044bebc00df1a90cc079b925c268ce3e9f4008",
+    "src/bytes.zig": "1bc7bacc69d425b98de277d5183d07abfa49b5e1db49d06097f5a6b90c1cbaf4",
+    "src/cancel.zig": "8c39b12c6b17023383227e6b6f794b24d199758235bc77551d5fd05dd89f9f1a",
+    "src/channel.zig": "85d6863fb6ddca6868fe6f5adc3f056aa25d038186bedcf7468980fe32044187",
+    "src/channel_control.zig": "43ce2af7294634dcb1714b219bc8869f44157bc3eb63b9ad0046eab2bcc2df94",
+    "src/child_connections.zig": "4e8c894442eef37cd68ce1b665ba13d51141ab51a539b2cf75444cd7c5446961",
+    "src/clipboard.zig": "c6a573270725b9ccf698c624c16cc5b7a1145e64ffac7187eda25614bc81de25",
+    "src/clock.zig": "ddd4928dcb21a5a2e620cce9e60216ece3a8efebd92261c641d4dfc3f4fb805d",
+    "src/codec_executor.zig": "4396d4967439950762a98d3ab4d44dbf6cca8930e081e3451f4abe3d8cdb61c7",
+    "src/cursor.zig": "fd148f6b94280a5afc2015d05ab358f098d8d3abc16ed0ab3aa3dcb090b414ff",
+    "src/cursor_wire.zig": "42becd4cc00e5bc359ccf6b9880c0df1264ee9007e122b74ed6892596c437c4b",
+    "src/damage.zig": "2ad182f2518b7ff72eef1757e91b3339f8ca207b195ca46ccae7083de07519a6",
+    "src/desktop_abi.zig": "ae0bced201ae2a0216f3034735922ad921bd6eb676fe316426f56798a0d26be0",
+    "src/desktop_child.zig": "92249c24eb9bb7e4c30caaedee17de2bd7ae1895dba673b3fc3593594bd827ae",
+    "src/desktop_snapshot.zig": "4df6c6e5db37759c934f6f6defc20281a6ae78fdecdc1ed0c2d969b34f6d041d",
+    "src/desktop_source.zig": "806e3c3d873661e84dc932f0b8c88b171bee44f42e5461b28ed8c8961d815cf0",
+    "src/desktop_source_abi.zig": "7c7d7cb61dc481d49ec051b0c0dacdd5c6005e19df160a7fdfb50e38bed9adcb",
+    "src/desktop_source_session.zig": "f2c0c11edd102e945f3e426da7fba1ceeb44d2959672087e69c5bf782e0263ae",
+    "src/diagnostics_abi.zig": "9c276d29a1211b58a9cf69a72de82ed3dcfe6f489520d8c2c7a682b0997f13f7",
+    "src/display.zig": "7094f1f4cad6f424ea5f4a520e2a41a0778b88633c62a208478db81e8876b4f5",
+    "src/display_child.zig": "d72fba17652b7bd6c63c5825699cb6496ea7f46c4e71370c3b303ddbb8df8c41",
+    "src/display_service.zig": "788e3d597c3f660329b78240d03af122ab162fb8a4ab2c31b7e8724726ce30ac",
+    "src/display_wire.zig": "c451bd46b76f1f8200090091c4667a2bbcfdf4db899283e699e323ded8c16816",
+    "src/endpoint.zig": "ae4534054eb0d28e9e0ac7dc7ae99db978148a3c1e6fa7090aa074162c94308d",
+    "src/file_source.zig": "3f9721f5bfa1dbfc902b714490a6d293c890f31d2b1737e9beaa999d4fd47fe5",
+    "src/file_transfer.zig": "9c2def65ca681b3f8384349218856a7d5d638ae0d5832191452dba3b55f5e076",
+    "src/flow.zig": "98fe203e656e3dfe5f0ff555eb5486a8df5e44fdde0cd69bf65de903a26e6fd7",
+    "src/frame_publisher.zig": "545780b4ba866160ca939c6b0e99252545929739b0416b77634d87018b7d02d8",
+    "src/framer.zig": "6da42ddb18ad9310b859863286c3b22592d7815f33d6bb673db672727a8b1c6c",
+    "src/generated.zig": "d9abfdaaea2f452c87c20ed08d05e8154f64e437f79af5289cf4b75d769289d7",
+    "src/glz.zig": "a5f0f1999968e3cb42b3d3a7bd28e8550bfc89f4ec6cb547016f1272ae9a0821",
+    "src/graphics.zig": "db19d2b80239b44b525c7d662182202f0a3eebd4bbbf9c4a95927e98ede3d85d",
+    "src/host_input.zig": "95eff86d577a3b276141638819e9381328f3f9e14769adbb32d6f19de6c9887d",
+    "src/host_view.zig": "5e6f53f32b3f0ab1e553bcc0c320eabe947283ce9a4ad06d40af3f6ef33700ad",
+    "src/host_view_native.zig": "e7d679cdca92e290a81493580cbb304ec8c0658f03afc9c186a9f7c05f81b0c3",
+    "src/image.zig": "7a8a20da658c8b4c0725fdfb8e8b38232e3cb8186f0a0112b68ac4b4724e488e",
+    "src/image_cache.zig": "8211d4193005b8d5c44e0c86141f820b411aa28f35098ec4378d064ef75af549",
+    "src/inputs.zig": "f37878c3974cb8f40096b089b8296e518153c3b1bb5ec10926835d5c413e8cc6",
+    "src/interaction_capture.zig": "99302e683e4e1d6c91af2fb361403ba99e66bc7438e25aeca86b5e3ade9b9af3",
+    "src/interaction_marker.zig": "a052982927a9db26f27575e53b53e84eeb38b771ec77b92680008e0a0a76efbd",
+    "src/interaction_record.zig": "d31677fb39248bcd3435d89751c45e54f5fdaf43e66f630c2f9c966da4632247",
+    "src/interaction_trace.zig": "58434db4603637bf9a885924d3028982835fd23dfcc4cb3997557217ca7a73c0",
+    "src/interaction_waiter.zig": "01cb5c610bdc8f7f2e62677cf69d1ac8ae09c71704092b5c5a9e0d0d08fc8b7d",
+    "src/interaction_writer.zig": "f2296587da1b12bee13a71059c8a48c06d8435c30ce358778f4bc6f04ef86be9",
+    "src/lib.zig": "05bc3a6a9627bea2898a64f3a50590691f471b1ea16851c6634eb6b3e630b3c2",
+    "src/link.zig": "1fd9bb67407f5ecc8c0bffe4a8f8e6cf768e518e1797d1f793eef1a60f3f5509",
+    "src/lz.zig": "079c31c706ebc3dcd22390c147806f8aef4e3645b8d362e92813e00da1bc7e09",
+    "src/mailbox.zig": "304213395e14689d59f06e58f765da2fc1edf397f88e13d3760a4b8837f1797d",
+    "src/main_abi.zig": "8a5edc1edae01be36e79fed9277eba5b570b853ef27ca0e1b6a6cd5932cc7872",
+    "src/main_channel.zig": "87854f369fd882d169c23f2110d8c34390e24afd97888861a081b7a9baa9a080",
+    "src/migration.zig": "e38ff02c2c27e317f06c4b354e5bc672fa0a08c5d6556ef8bf28de8a063c68df",
+    "src/migration_coordinator.zig": "dc35a4425f8726419edfe363fb57c7b0b14061e9e5a9a2c59838b654589ef2aa",
+    "src/monitor_config.zig": "d978dbc11c08a1fe1059b6f9ceadbfee1377e9ec5a5d3e99db5be03a7b4ff1f1",
+    "src/native_codecs.zig": "e933cc3e7db81872a16b983caab1da41d7fa0e698bba32cc3f9552c65a292abb",
+    "src/network_abi.zig": "5db6a9bff30adb941144a5d52d4700963e0fc4ea18ce53f40ec7448b98814889",
+    "src/pasteboard.zig": "ee03c29502e2cf461d08aba095c06b5f160ea13a7bf27f6aecc8b6d921d14c35",
+    "src/pipeline_abi.zig": "215e7ce3a1241a39ddcc79178fe0dc82a5efa7e37522767a73e5a3a650837517",
+    "src/platform/apple/audio_bridge.m": "fea73c5cb86c4684fe124855efb352df2b77c90f342032ea15dac67a6dc55591",
+    "src/platform/apple/codec_bridge.c": "7c2a08b50bf0731992cfb4e9b2a7257ca9d0de2fd3402f318efc12c2879decb2",
+    "src/platform/apple/graphics_bridge.m": "3e462eb3a1a922c00d5afe15a88701d9bc5e4503871313a856db057b79a6c337",
+    "src/platform/apple/host_view_bridge.m": "71c82ae4920580610fec7e2ad238d819ff65d010d8335bfe91d166124ec41f90",
+    "src/platform/apple/network_bridge.m": "f6785b5950b5a3e001365dde3151bbe522738e3abc904e109efc776136af3649",
+    "src/platform/apple/pasteboard_bridge.m": "7ca9f7bb24eb36ff1be35a17a2ee56d4cfa2b190d05316ffd1be720488306877",
+    "src/platform/apple/security.c": "12a89ec84fe3109f26878641d0f877c6030369c6b708da0ded5502034a354f65",
+    "src/platform/apple/video_bridge.m": "cc19c432d2337a8efe41e32a1113f75aaeb52cccc89223afc21dce1ba94a71a1",
+    "src/platform/apple/webdav_bridge.m": "fd1dd2a087d21d40aff54f64307b6bbc12f92a23a4a57d24ce416b2fff3cddcf",
+    "src/presentation_diagnostics.zig": "58fb64e79d783d71abb059940cffa468eaa556121885ab82c6eab29bea72a532",
+    "src/presentation_policy.zig": "01df2e6941672bfbdb414f018724d15005e780e84edcfcc11d9641c5a7f439a6",
+    "src/presenter.zig": "042efa328595e2b02868776bb67c6ba0be486fd60dedf8027fc0bbd05872c5c7",
+    "src/protocol_support.zig": "636799cedb94dce9678663f22b80dc2ec9c8392e8bdc78c6007d1a5118aca6ea",
+    "src/region.zig": "33029ea65341411e659a0a0526b4a869091d0acc991a8591f11e15fbaaa4b66a",
+    "src/root.zig": "d72ed388fcb8cd04242564eb9d6df3e31e38abd1e6fb88bd1a2a649b63054ebf",
+    "src/session.zig": "23af53c675e416fa8456544015e03c04272cb4e11abfca52cc71f509ba3b34b4",
+    "src/session_abi.zig": "c8f828bb374c627de2f05eee6e00aa13769bf751596ffa23dcf9115b50f4e939",
+    "src/smartcard.zig": "f56530dde14e26f9174fdff2085d53f6b14dfab833bafd797220d5295e9e07c8",
+    "src/smartcard_wire.zig": "a2abdd89f41c8f251ca1e353cd0a480a504136bd3656f00674a0b820392335d7",
+    "src/stream_decoder.zig": "06493617864a3eccab39607ef2fee82862cf823fe604fe09384e9dc68c5f415c",
+    "src/stream_scheduler.zig": "3f3e392a0ed0d1c671d32a55120121bec441159bea5773131f1610ee797d4cdd",
+    "src/stream_wire.zig": "81a89e7d6b6a88ec788b1caae58f37ef373a24357debd4149b5b67791df3283d",
+    "src/subject.zig": "8636795bead4a0e8243fd4b27d0b9187c4934bd9655f31853069bbfd629cf489",
+    "src/supervisor.zig": "73408e23969f1aed0a8a91e51271bfc98561bd62ec7f0ccdbd022b281051ee7f",
+    "src/surface.zig": "ef5a0086c78e0fa56898e461ec18d72470a387dfe3bca0cd71a50bfef8599a10",
+    "src/surface_budget.zig": "143b80568412e9c64ac7c4515a2c0e5d4e228996bec17b6722241246fd2e57d4",
+    "src/surface_metrics.zig": "1120362c9f8f8af7090d7d3d1ed0e88b685fa49d27396c5034b2c2c9f7f738ef",
+    "src/sync.zig": "23c0fc6fe491b12b8f6c8eea342bb3e42d0a3b170cfd7397af2c75a64e49df4f",
+    "src/ticket.zig": "f99f089f9f41942703dabb08a8eaf4c7489097b3bd3aec11b5d1d499bcc69563",
+    "src/timing.zig": "8b649fd8271603a8e9954711d0ebcd8377f734c2cb1e71649903964e2e6a7923",
+    "src/tls.zig": "28964109bb70435934e5af73f6ec5dea5d5e774b0eed497eddedac4a02be079a",
+    "src/transport.zig": "05afbdf2bfa941247b1a9164bc0544be719a18768ef19b9bd509c861513fe858",
+    "src/usb_abi.zig": "17f6440359f887711581a5026d9a7866e24abfbfec76de530a4e4ccf444e8e8d",
+    "src/usb_host.zig": "46ce40c1a8586ec1ad2756253e9e9722cc9a06bee2fdfd3cacee5ce4f9754684",
+    "src/usb_host_abi.zig": "c9a9cad7ad9ba1203c12cb24aea1be75fcf300d1fb89808cf1dd87f42b7273a3",
+    "src/usb_route.zig": "5847f34e236d778cf3264386a17ffcc27caae7d81b0e44c0d8f621c852e15cdf",
+    "src/usb_route_abi.zig": "2fbd4fff3f64e09b3978a74c51895e310568b1df63fd6aa4b5761afb93ac0f51",
+    "src/usb_runner.zig": "64cdf806c3ca09975c388a01dda1458bffe1a24980ac178b9a318179aacedc24",
+    "src/usb_shared_backend.zig": "d86f38ae4b2558878e918f6a7deb4ef6740e614fd29b5245ffc187f812788830",
+    "src/video.zig": "0afd36eb107d9dc9c580f202b0ea6c2544e594c303c0dfd648c840fb41a79d52",
+    "src/video_failure.zig": "807e2ee48c5cd2755606ecb685bab4184e0c77ddefccf8d9401e11b9251f25c1",
+    "src/vmc.zig": "01f2fe48330f8e72e4ae1fd1b700dbde3a194b2d10f60fe2be76c318c177f468",
+    "src/webdav.zig": "8b2cc8ef975dc9e0f7dab9baf372b289d5cd20be2810d876cb39656c54691e60",
+    "src/webdav_abi.zig": "d0d2610b6443da5422147528f2aac8b975f6386489d7d2973eb792988234c1bb",
+    "src/webdav_fs.zig": "3a864c79701dc76a372b20c58958617b628946994aa53cd3575097145ccac9e3",
+    "src/webdav_http.zig": "35d5fa75d624e578e27ce4e23603562a33352bfb2a579cec1b99cbd487d5de12",
+    "src/webdav_path.zig": "44f81e1b826afc06b7782fa4b8a54bbb1543fcfb6aefa1701d6403266c341cc5",
+    "src/webdav_queue.zig": "eb02e9e7d7f0470ed84b7672769c7958bba4c6aaae12e502690ed01d004c6421",
+    "src/webdav_route.zig": "5f216386831f7d4078af84bc160c3295c8b9be38fc25f7fa0a3341f051343a4d",
+    "src/webdav_route_abi.zig": "ea889fb91630003d34133f6412e8ad75236feda69c33f4614ef795140704ddb1",
+    "src/webdav_runner.zig": "ecf69e681c3effbb56b9f3f3388d0bee540830019f54ed6051b3a3a230b38746",
+    "src/webdav_server.zig": "2a887662e18a03da7c04449ec38bf4e962452687659be58c9d3c5d91afe05520",
+    "src/zlib.zig": "f80ead359a5b8dc3fdb863f0c59050dbd67b41f8baed155346883e019b1bef35",
+    "test/PublicAPIConsumer/Package.swift": "2cd4035afbe242202b2c04c909ebbf379e7b7716f00af937f926891cfdbedf52",
+    "test/PublicAPIConsumer/Sources/PublicAPIConsumer/main.swift": "ff646ddbdc361f0dcfffeaa8ac91c7ed7ad69de21c2f1b2ecd7c9a627b163007",
+    "test/fixtures/SpiceCodecsTests/glz-reference-sequence.json": "b2905c003bc3fdbd911631855109e24daddcf5326ac726d9a047a4e3cd1dfeea",
+    "test/fixtures/SpiceCodecsTests/jpeg-420-9x7.json": "243970769572f98f8ea0469409b111a59fc2ddaa1b3789ca4c10350c5d998ecd",
+    "test/fixtures/SpiceCodecsTests/jpeg-8x8.json": "85b0430f7ea5d98d9adaee0d453e1bdec9467d4f56ce90653b0212976e1ab5da",
+    "test/fixtures/SpiceCodecsTests/jpeg-cmyk-5x4.json": "1a495be5327adbd30c35ae4d1eba3d81b790b31a37bec2e776346502dfc7a8b6",
+    "test/fixtures/SpiceCodecsTests/jpeg-gray-7x5.json": "803e4d47f6826d4d38e5954f3e7e03fdfec8cf2ec27ad77c5cc7031633de5cbe",
+    "test/fixtures/SpiceCodecsTests/jpeg-icc-6x5.json": "06a7751da91e7e016fb31d230a38001feebbfe35b1adac9f6f4a8b95342cdb6c",
+    "test/fixtures/SpiceCodecsTests/jpeg-progressive-5x3.json": "d962214a6190f2c42770db8ed039571c0be8683181716dba9fa2a6e8ed18d805",
+    "test/fixtures/SpiceCodecsTests/lz-a8-6x3.json": "220b6061acb26fdb90da0009e85dfe39b0d091c25c9b305d39d8771e41edc940",
+    "test/fixtures/SpiceCodecsTests/lz-rgb16-6x3.json": "f58adc8168d6082fbb23d1c8b638acf96b147bf40393a3c10517f2fa7f273b08",
+    "test/fixtures/SpiceCodecsTests/lz-rgb24-6x3.json": "ac867df021fc71d43ec300d65f476fde61a44328312b581dff7d66d2915161c0",
+    "test/fixtures/SpiceCodecsTests/lz-rgb32-6x3.json": "f203631acdcfdf6814d10356042f71c4e9c8d8ddf05465877fb442f13fa9e508",
+    "test/fixtures/SpiceCodecsTests/lz-rgba-6x3.json": "8a3b681f768a078f14f8387a318faff9fde5dc02d7266af7a15a0e1d929063c5",
+    "test/fixtures/SpiceCodecsTests/lz-xxxa-6x3.json": "1ae06bfc895262ef4d3e7e2f87517262a557aa01506edfe7599de239c1d3d63d",
+    "test/fixtures/SpiceCodecsTests/lzplt-plt1be-9x3.json": "07e7909b158b000aa7f43fdf898bbb05daf3e3015fd1592fe4eabe2fca93d81b",
+    "test/fixtures/SpiceCodecsTests/lzplt-plt1le-9x3.json": "ea057136b9eca46968342eea0dbb082a72ad8ae7f5dc5a20cad1f1d8ae864f86",
+    "test/fixtures/SpiceCodecsTests/lzplt-plt4be-9x3.json": "32185f0e19f6d2393f733ae93e91c5888d284a60161721ad40f3ed3acd2aa94c",
+    "test/fixtures/SpiceCodecsTests/lzplt-plt4le-9x3.json": "b428f8d2a41d78e57374d70a31723fb8e37fcab6d6eb02051288fc15f744a180",
+    "test/fixtures/SpiceCodecsTests/lzplt-plt8-9x3.json": "178dcb9eda0a8a36d698f150f736bcc190ca37bb212820e511af70e3dba3f76c",
+    "test/fixtures/SpiceCodecsTests/quic-gray-7x5.json": "9d21036a2d81df8dc52cb60ca3dc3dff712b8e15ab593948eaa5e0f87493b3e1",
+    "test/fixtures/SpiceCodecsTests/quic-rgb16-7x5.json": "9ee3ed45db95da55b371b89fa9fa00395ac7be43d93646e16dc3dbce48d5d670",
+    "test/fixtures/SpiceCodecsTests/quic-rgb24-7x5.json": "76a7f567e2f857aba3662df96badefab1d001628269f3e920abde0403a58f3b9",
+    "test/fixtures/SpiceCodecsTests/quic-rgb32-7x5.json": "b108de9f3b133535b9bfeccc4072798aaf8677ba70f7d545a251033a846135e5",
+    "test/fixtures/SpiceCodecsTests/quic-rgba-7x5.json": "0b2febeb88b08b4c9966a53c6df7f98b55cb836d944dd740fd306ae3874af436",
+    "test/fixtures/SpiceCodecsTests/zlib-glz-rgb32.json": "e0289e43922ba80b9ff7ba952b74e72e3feb24121127493e1325601c8a906afa",
+    "test/fixtures/SpiceCoreTests/Display/basic-desktop.json": "0fa162ba04e3150bc2d210352c23891685b8fd94f5307dfe1d0bf0059ada2c72",
+    "test/fixtures/SpiceVideoToolboxTests/h264-baseline-128x128.json": "798a464717f009e30a590378e35273eadda7de9c716328fb12010718a4bc5ad2",
+    "test/fixtures/SpiceVideoToolboxTests/h264-high-128x128.json": "97faff01ba51ce64e145219d94961a53399de57f8f562e326a7070cf79d55eff",
+    "test/fixtures/SpiceVideoToolboxTests/h265-main-128x128.json": "9a063c5bd35957e14b70852acd5cbea6fbc31e5fc5fa9d9e3a4166cd580ee275",
+    "test/fixtures/SwiftSpiceTests/binary-grid-marker.c": "c4215865008d873bba150459a4069af0939a4ae8271a10119bdc599193f221c7",
+    "test/jpeg/jpeg-check.c": "a61766ceee100a6460d2bc3c158191d403e78f53e592a842ecea54c9985d8399",
+    "test/native/abi-consumer.c": "09b57835f191e18a0a8b682fbb9cf5e3c0cc5311312e510401ed7865572cfd17",
+    "test/native/agent-api-integration.py": "e23bac489baca6d72955c1b7edbe12e6ede0fadcf8f0a4c5db36a48dd9daf8d3",
+    "test/native/agent-consumer.c": "a795af3546209045b5d1ea0bf21c207d1e3179d0186e27a5eba2e76023a9062c",
+    "test/native/agent-runner-consumer.m": "04d1dfcc8f87ca2b7528bd4d0e59f24fb7c95ed46e4e38f817cc0e4e1781d081",
+    "test/native/agent-services-differential.py": "76810cc792fc9b37642338e8b0bcb2aca763dc45cec925fec19a47daad21f29f",
+    "test/native/agent-services-oracle.swift": "94faa96cb69d089c3e7be5dc8efe04ecd5add16245d57f5ef69043c5dfc35f62",
+    "test/native/agent_runner_tests.zig": "9db85b4b2d93080cb898f413871fbfae3c95e247d2e28d9c49513d2f724eefc4",
+    "test/native/agent_services_fixture.zig": "268cfeb48d8ce36edf1693b607d6e13faee8524b0d6cd4a7ef09caba21bf85d6",
+    "test/native/agent_services_tests.zig": "663b07ae5c7dffe5fdc16f97211e778088e58bef26bf06902231c81006a1d936",
+    "test/native/annexb-differential.py": "85a7a15d28a06e59c6dbe5aa32ee160b1787e81c7f9589042dcb179457e511e9",
+    "test/native/annexb-oracle.swift": "dc6983fe7b972dfc2d02a38e812c87eb7d53ac7a1dddc3f9f484bb3cd2c0deda",
+    "test/native/audio-capture-oracle.swift": "076c2d0244445e015bb06cdd5cd19bdc4bf7f0aea41b6620bb0d363dc924a1a3",
+    "test/native/audio-differential.py": "ef34ffbd457aee2ff8447485a5ad221b0b88c67fc272fe45d65a3850e5f93fb6",
+    "test/native/audio-native-consumer.m": "1611a0d303a2a8163a904b21a1504214f26f478a80bb132a9c07db30facb9df5",
+    "test/native/audio-oracle.swift": "e11e47d398a1ca72f4c3413a01b95042edee341c5a24725d0f32e861be02af0f",
+    "test/native/audio-ring-differential.py": "417b2265ce962d0086568b4295221bfbb8355220819fa72157f9c4893fdb03e2",
+    "test/native/audio-ring-oracle.swift": "59078789c74f272e1fbf7e88cb324d61c9a3301ad00863a2487f1f666d980b3f",
+    "test/native/audio_native_tests.zig": "f9ec44b8aede245ae3b148de2c6b53ec855d01b8cbe0bf460cf2f4da783b8a79",
+    "test/native/audio_probe.m": "8370042b4e91f77b5ccc2f9f9d6a50b5f1aa922501ed50f36c41d490e43a451a",
+    "test/native/audio_ring_fixture.zig": "2424bea9be158ff2f40dcd8927a51878921c9ee4f72843a2143a8e356d27ea4e",
+    "test/native/audio_ring_tests.zig": "930a9dee23a3b01a3039bb9bb17c393e777084aa486b4c6afe2cc1d6bf38f0a1",
+    "test/native/audio_runner_tests.zig": "c236329e49a7e19d4775a4a7001d99fafdb6597f84a3c250b26a59b635c6431d",
+    "test/native/audio_tests.zig": "f003f9228c208ea5f5e8d41ba982ccfce932ecd538df036fe22bbc644242c8a9",
+    "test/native/channel_tests.zig": "f22f130c778ea155895862496d58aee2c8085037542d256e59ee3408c97d6a05",
+    "test/native/core_tests.zig": "a2203548aefdbf394895782b21d4c5792a297301c657e9ae4b7a42f6f4cb369c",
+    "test/native/cursor-differential.py": "d8c9695aeac76595bbbaaf3b62ea65767c46aa1db352118427fa5574d4807b7a",
+    "test/native/cursor-oracle.swift": "ba88d970b5959d4e8708da1c212b35aeb2ee56daf588fed7722094ea19bdb0b5",
+    "test/native/damage-differential.py": "bce22b045451e83d20a6a8f496814de4cf0e79c0e2d378d71d6ff152bdf2b51b",
+    "test/native/desktop-api-integration.py": "a3f402a4376778f0144b14a2382296a63f1524b66545f065c87d10124e5b3788",
+    "test/native/desktop-consumer.c": "0747d21d086f5ea730e7480d598c04ea72430a6bce801d8f8dd4596c171cc976",
+    "test/native/desktop_presentation_tests.zig": "965e4bed1ff03cd0173b4ecf0b7a47e1e41e500063ba060e81aa37e150ff53ab",
+    "test/native/desktop_presenter_consumer.m": "5ffacaca895542096e6b83f740a36997dba20e3e7c6cf22bf48d35440e45aa20",
+    "test/native/desktop_snapshot_tests.zig": "f4087c590c6953b7aa0be2d08d6de9a17e69a61eafdadee59f83fc737704999e",
+    "test/native/desktop_source_tests.zig": "c7b7a04a902882cc1e1eaa69f5f3354afd975ab94e0c4a3ab8ffc92c72dd1bb7",
+    "test/native/desktop_tests.zig": "7c5c9e6120d4876375d67220c05a7a64efdb9c59325db7a08b8682316a30b62d",
+    "test/native/diagnostics-api-integration.py": "e416c44faf89f88f8a32a681bdea88da56d0fc91b3ea0d8ae242f0ef70585344",
+    "test/native/diagnostics-consumer.c": "cc3d13cedd24f6718f3bc32daa69d7e861a9e0c4d12bbca4e806ee35362b04f8",
+    "test/native/diagnostics-differential.py": "50b0867c9a4f0a4f95c7454a2d61a3aa1255044940c612744e0be46f68bd814b",
+    "test/native/diagnostics-oracle.swift": "07d70b50cc324ec5679e7825f01c6183802fe2fb8fa9390bf4bd6c12f77c29ef",
+    "test/native/diagnostics_fixture.zig": "d206f87d26fbb5c77bb7229d1721bfe462bc9d3c4efff5b7be4e9b6a90092fa8",
+    "test/native/diagnostics_tests.zig": "e8df451bd9347624de5880d28f552c59788598c91749f56cca12086b4da484f2",
+    "test/native/differential.py": "9424ed3427ea6fb2bbbd7490ae116694aec9faff8b52dfc7ae3db0a6712f323f",
+    "test/native/display-differential.py": "87c7c7fe0c745658169c2615b6f24bebd674c54d3abc48764f83ed12639e826f",
+    "test/native/display-oracle.swift": "837c4664c5abceb2df12e3f6ffb8a7b942762366b9210bebd1cf6fcc20993eed",
+    "test/native/display_fixture.zig": "0a7d1d63d41cf115c7f5f3f2a5071e3746b7ab5d955888fd312112e27b2ab932",
+    "test/native/display_integration.py": "b733b4b20b29410509ae68ab9841ac58bcabd95cdbeab2a56accad69449c6cb0",
+    "test/native/display_tests.zig": "80ed75d17641d3ed4f3c2b9517bfe53e5a11511f7ad78ca97a3e152ee11dcec4",
+    "test/native/glz-differential.py": "d7e63e9e8b675e164431d6a1b7d73bbfb6342494cc7310de64f1ecc69216877a",
+    "test/native/glz-oracle.swift": "3c0df9e9fe0efe471eabe76faecd4c367cd12f39634b225935a7a35d825924ab",
+    "test/native/glz_fixture.zig": "7ee6b1cd61492bde808d7782c9738c5623d5aef2e7d857332c52f0c825f4d8fe",
+    "test/native/glz_tests.zig": "4533ffc682ecc390ff2ee098a986e999f1b4a74d0904cb3551e2aa0707f3b357",
+    "test/native/graphics-consumer.c": "90c0255bf32f5f3ba4cd90561c14efa8f1c290187dcbb6f2a7e2ac2205b9f212",
+    "test/native/graphics-differential.py": "80b887932f60a83c2dfa9e2d98b6cbced8583a0e0f2ef510ec08b6c20e5f4999",
+    "test/native/graphics_fixture.zig": "ed236f696c73df167b3cf33eb56c9cc671532d1bf5cf47bff3de128bcb11506a",
+    "test/native/graphics_probe.m": "e33093e6f69b9a2c41f346e1c6ea38bb0bfe7f5f98a571f430551fe7f3e404e4",
+    "test/native/graphics_tests.zig": "1951340dc257d4cf5d1b3931a717143449d167dd36bf05833d4b0cff97745316",
+    "test/native/host-api-consumer.m": "20f447ebf6d7edfda6bf8dca2bedeae9f26b88066225f26eb6c6f276d83ff980",
+    "test/native/host-input-differential.py": "4faebebad74c080f356cc6b0c381ee5330ff6ade5d8a0818525256c3008a7081",
+    "test/native/host-input-oracle.swift": "4ec84c99569eaea124a292bfca72ec0a3b78fcd6ddb85e53a341eb506085aa55",
+    "test/native/host-view-native.m": "26eca6e97be6a828acf91ec7e8d990c040183ed77d7e45cf5e6c2aed408ee554",
+    "test/native/host_input_fixture.zig": "555499f8f96656410c79295e8888a0bf4e30467703d73dbac55037d7342c2880",
+    "test/native/host_input_tests.zig": "6fdbe277008aae5a72b2cd5f69f2441fc045eec7aa2c20959cf1712edbbe3aed",
+    "test/native/host_view_native_fixture.zig": "0a3a23778ad3cbfa5c48da4a75067d2443ea32ffeac0c2009719e026cbf5f0c2",
+    "test/native/host_view_tests.zig": "9653bbf34ed0309be32c507b1b056d705cb2587a5bc7c50a083554631c1fc017",
+    "test/native/image_cache_tests.zig": "4e4871a4dbd5ccb20f81a22dc6b0f8018c7f409b5dcd66b8d8ca5f8f5952a0a9",
+    "test/native/image_wait_tests.zig": "5616495d0c17248f204f69972da812bb86d77420d2e3af6d95800cdbfa9891ad",
+    "test/native/installed-consumer.c": "fab74deda2695b4b72951027fe6b72113751875fe65a77ba2dd059fb709b8d47",
+    "test/native/integration_metadata.py": "03627608400dc70abfd2716adf53796243b812a3bb76615b042ced61f0018b26",
+    "test/native/lz-differential.py": "bf1ead1ed05b0eea0b4237546aa919c5c096653cdf8549ca62efb1d184792147",
+    "test/native/lz-oracle.swift": "ee368603228f16ec059f651f0d29508463231d11d6e411d34bc599c87f41354b",
+    "test/native/main_tests.zig": "6cbc68b44d28478eda316b1b9ef5b35cb7c30c0d65adab3da255d7347f3b3ba8",
+    "test/native/mps-reference.swift": "a1c392bfdb22d10c9b3a2671db216b15fe072ecddcd24037d62e7635e0d5c768",
+    "test/native/native-codec-fixtures.py": "66cccf14077a3feec715cfc61edc64a640667197e6808547d835e11d00a1f2c7",
+    "test/native/network-consumer.c": "33ecb04c81e926a54e2b47a87a83fc77763296e318972f329acb1d3d76d141c2",
+    "test/native/network-integration.py": "7b430e12368cf5f5bdd32ff3cdc5e6056cef2f502a8319af45eeee81033f183e",
+    "test/native/pasteboard-consumer.m": "e441d0170add42bd63ec703cd8a09be299b43c988b52158862ceb9d9513f10cc",
+    "test/native/pasteboard-oracle.swift": "369fa8cf3f29d2aa5189ac9bab2c9e09e2b404c98020a42517cdd5ab5549ae86",
+    "test/native/pasteboard_probe.m": "4ad12a0253fe0ae7d1089f7b556a8b63d97e9f4ba6ce2c9ff1ec421a3de86c51",
+    "test/native/pasteboard_tests.zig": "93a633b56082f261628d3f95e4f347cc128c87f16c0939e56eaa80b4409a6b5b",
+    "test/native/peripheral-differential.py": "993afee84353e8d25ab09888dc6cf50c595573495927459143c8135924aaef73",
+    "test/native/peripheral-oracle.swift": "b86258b48d967fc34dc303752a25a59eeab1ce55a59f2622d68ed173e914f367",
+    "test/native/peripheral_tests.zig": "e1ff32f5ffac7a9296bebed0b712541d0a62082d6257798fd96a253b2078ab8d",
+    "test/native/presentation-observer-native.m": "64f8662f49d5c0be1fd931505dc45978ad758f167a5e6bf7fb9fde477f149af6",
+    "test/native/presentation-policy-differential.py": "b159c886cb306bf8ac79d0dae2d80766f44d2cd10be278a76d08f45b2c577a57",
+    "test/native/presentation-policy-oracle.swift": "a56f2012f08d24811abf60072c8257fb18f568feecc9ba29b40c249b824acccc",
+    "test/native/presentation_policy_fixture.zig": "09dd540bafa656c5fa6c7ce19fda93eb223c8b6dc91613ddc6df2dae6419feec",
+    "test/native/presentation_policy_tests.zig": "d975cc52f669c6c0a7a89c9748da5425148fc2fc0644b0185458b59d9cb8fd2a",
+    "test/native/presenter_tests.zig": "212782357e4f3d3bef5b5c8db44ad98d22f3664048cfbc323bc1a79661d19b6d",
+    "test/native/publisher_tests.zig": "f0f0f46cb621cc955eee182a1c9e56dc99fbb31b47b00a3f81861f68cd3f376b",
+    "test/native/reconnect-api-integration.py": "5f756f2fa2518f07996cd8eb659898eddd730a257154db3d917be2277c453412",
+    "test/native/reconnect-consumer.c": "dd3c26310724b43043994323f5e95c829b10116c07dbfd810fbca06812197de1",
+    "test/native/region_tests.zig": "f03e4b06df026314b9a3f46dd98be14bc2b2aa99ef7c1ae92d8269f9142deb94",
+    "test/native/root.zig": "348a54089791c354d27a91583e009fcc1df4f2046f6e582acaab66bed2382c05",
+    "test/native/scheduler_tests.zig": "6848b9adbba5fdd45723ab59b913d808b5bc656a7a7a5e4c1d098d725845dc18",
+    "test/native/session_integration.py": "56fc758aa61abd42fdd142d144093eb455188570875e8f52a64ed57fb1cc3bbc",
+    "test/native/session_tests.zig": "290686869b235fb374d88515824121650aa32962a0e6936fdecfadd8e407c55c",
+    "test/native/source-api-integration.py": "ebeb2b30c48de385cd25572930eef66b7843e63c942f07308f0dcfd70af67c8c",
+    "test/native/source-consumer.c": "2a796de1f9d311ee02454a186ef50a3c28e56322ecbcbd1ff336ee1fe9f44eb2",
+    "test/native/stream_tests.zig": "3937bdc246bbe1900ad197d49f28d48497b3604cac06857e0afac056f28c9e47",
+    "test/native/supervisor_fixture.zig": "a7095d4ff87345d45fb7e7ff1831f792724dbdaff63841b64edaed9788af65d0",
+    "test/native/supervisor_integration.py": "74707f9cba9ac5c79ee15a2eea0e970c3fc274d5eb66d0f78a7d1b771c50a12d",
+    "test/native/surface_tests.zig": "b9a56ce1e542054a1012abbd47e644cdb43f3c0337290a59bfb39bd3963998e2",
+    "test/native/swift-agent-consumer.swift": "b68c2e37d0fb0a9904228d5f5dab96a8970a865d001127ceef4b1dfb73b7d90d",
+    "test/native/swift-agent-integration.py": "0414cdac2f1348416b4a911b9af068e6a6890266a6714146410d7f3c68bee95b",
+    "test/native/swift-audio-consumer.swift": "cca1d3bc195f17a8563ebb469f06ccaaa63e4206dfde1ab02d4456492e2c3c9d",
+    "test/native/swift-audio-integration.py": "383f6058a265f87dd1a324f6d4ea4737dce6c50394088cf71e59785f57214120",
+    "test/native/swift-native-consumer.swift": "1dfe81a21ef1ba627caf854a958e03e86f026d2e3a972e0aa56c1c6159965b4f",
+    "test/native/swift-native-integration.py": "044c40fb1ff99f06294b1b828e62ca479af114e18467310ba5cf6c291be8bdd7",
+    "test/native/swift-session-consumer.swift": "b349c0f0d13695237ce38b3bbe2f350fd211fa7abf2f1be1999c0ffa6138975b",
+    "test/native/swift-session-integration.py": "61b114e77890ae70263c7894363faf41c64d6003deb45159a0c0bd01f1964c54",
+    "test/native/swift-usb-consumer.swift": "3babf04cd00e187011e881ee9e5a6e5e492dfa4722cd848bf6b129606e28303a",
+    "test/native/swift-usb-integration.py": "5787fe4b9e16a4508a8cef5448c5af6a6ecedd106de60a20d1f06deac40c66cd",
+    "test/native/swift-view-consumer.swift": "1b98772bccdea88473f6103665dc0185b1a22edd3510008aca4fea81e84e2375",
+    "test/native/swift-webdav-consumer.swift": "064acde5fc0a8281c84c1ad3ece3f102ba8ba662a2a9162649981b3a8d129250",
+    "test/native/swift-webdav-integration.py": "640587080be34fefcf23a5a7c02f0baf2880381a130189aa817541d517af72f5",
+    "test/native/ticket-consumer.c": "13fded24fea917f3a3daa2130587cd2b16995759afacb5d9813253ce6abaf616",
+    "test/native/trace-marker-jpeg.c": "1f939c71e785ec60cc971a6ec2bef9be45d57dfc124ab0a56637efee980f8f56",
+    "test/native/usb-abi-check.c": "277808c5fc74f736cdd880bd40b32a344d47d6af71092be861ca1b4a5f9ab332",
+    "test/native/usb-api-integration.py": "8fd423a19bb35ff14c5a726ab570bef8b0c80926514a4fe6deccb4dca2351949",
+    "test/native/usb-consumer.c": "117bd6b680a9c770cafbeb0fa93cae1da9b2a665c781a55c57a2958a2512bf5e",
+    "test/native/usb-host-consumer.c": "6e0672b649bb06bca573c722bf11b28c3db6cc5fe342562d570ad515db13c45c",
+    "test/native/usb-native-faults.c": "7b1302048e9bda8eb74af1e0961df0893c6b2863397eabc05d1acd5a6f5c0465",
+    "test/native/usb_host_tests.zig": "f1deb55387e939f204ed44c17a4ad1f9aae4d811a3b5c0450a802aac7b3a95aa",
+    "test/native/usb_native_failure_tests.zig": "535bcbe28e68b07795e3632294fd112dd3b9dc3d0e7b3237d2b452eb116bd9f7",
+    "test/native/usb_runner_tests.zig": "8184ed948155e55b99b311362cbf360002ea8f7dd5d89aba8f8224a2ebb4926e",
+    "test/native/video-consumer.c": "df38d02aeb9437a501ff492b975eadad8d783d33381b134ece9bb9db371e1aec",
+    "test/native/video-error-api-integration.py": "72a945bbd031b4cf6382781f6322b3ca851560426b63634f57f7044394e47ba6",
+    "test/native/video-error-consumer.c": "9f41686dda7f894e14f52b37543579c0f4c6fb0c57a970efd6646b86dc18b6e3",
+    "test/native/video-failure-native.c": "fa7628850acbd061ffff5bf6f25442e909b780be6a2638060e633a31b34299a1",
+    "test/native/video-integration.py": "4539cfb2e670a37b3dc66119a5754912e20df44739d40596736dada425c8bedf",
+    "test/native/video-oracle.swift": "05a1c049c628cd3a267caeecc01df9f469cfd5289ef982bde806afabbc33d121",
+    "test/native/video_failure_fixture.zig": "5fd2bfeea0aa1a6c1fd6a5f4f79fd12a788501dd536801f841b9baf84d810521",
+    "test/native/video_failure_tests.zig": "102aad4df1e00e8e5f3023b20a0504ba53e8593cd7008415e8b2b646f7c66357",
+    "test/native/video_failures.c": "c1d1ee15f61a116ae51a9e8c63039930eb515f211a58977311f5c097fa4e8e04",
+    "test/native/video_fixture.zig": "3e9e5d78b175b14776678f7528d1132bcf9a061ae29a58a8374b3b852f8cd7a9",
+    "test/native/video_probe.m": "ccd61fc38d1ae4aaae03f450cac78c3e1e91f1af829eefe36c9dfd28a39dc021",
+    "test/native/video_tests.zig": "77f44d7aab62643dcde48f5d0c5560cedc6f6265580363817e378a7ff343b760",
+    "test/native/webdav-api-integration.py": "296e36af8f4fc3f481de7c3c9aa776c5bea506bb2e67e9306dcca82f0def5cd4",
+    "test/native/webdav-consumer.c": "ab64339aec4474ef3ac9f4e34d7a964d8ebefd02336c1389fdd10b7c432fdea2",
+    "test/native/webdav-fs-differential.py": "b5b2182092a711849253bba89b68f578db3123310366982aa2e745addd892f20",
+    "test/native/webdav-fs-oracle.swift": "8f3f2874eae6c6d5a3f86e002a761b5833cd29b4eb5158c8b8d46167892489d1",
+    "test/native/webdav-http-differential.py": "2dd36ea9c489b65b0084e6b56996cd622106705e46b26af91a7a59266a0dbf77",
+    "test/native/webdav-http-oracle.swift": "bd4b053cff5f07cabc64b8cb19e02c5277bccad5ca10562b8040ced95f6fdbc2",
+    "test/native/webdav-native-consumer.m": "12ed64676bcb316bf6d538915224fcab5e1ded5de906473d7a7d47e22a9f244c",
+    "test/native/webdav_fs_fixture.zig": "95963c567f1775af8a35b32d63f571966502c649e9c4e9031f1b68a0a0b17cff",
+    "test/native/webdav_fs_tests.zig": "d3a7749302eb47e27670138d1784f3d9e023f1dc246d5407ae29606db07ec60d",
+    "test/native/webdav_http_fixture.zig": "79e3cc4c4ccd737bc4e9f40da0e61e105ba1814b55e4a64924aabe71358c7208",
+    "test/native/webdav_http_tests.zig": "0281d105d240259cf448566a1a06ed7e64efefe8e202ed9fa552ef072d3c671c",
+    "test/native/webdav_path_tests.zig": "0bc57d18602111f91d7f3d13bbe97765ca56fdb6cb5abe70adfe973df6fd71af",
+    "test/native/webdav_queue_tests.zig": "fc22b7e0fdad68bbc411939615ed31afa3a72c1f046ce00032ae585c1216a65c",
+    "test/native/webdav_runner_tests.zig": "5912d61a6a0b2d76c7651bbe12cf5284506573fc05558cac64dd49a80f192a5f",
+    "test/native/webdav_server_tests.zig": "6d51e34f18d30e9f380ee2b42041c8f9fdbc52f86557c65da54b864a26ca3c87",
+    "test/native/webdav_test_support.zig": "e1c1e62664e62068e4f034ec019682f90b09a6b5ef1c70153a8d760c36627242",
+    "test/native/wire-oracle.swift": "0f6be26fdcc1b4efd74dd79e83d6fd34bd12625177501ec4301f4ee6ad147ece",
+    "test/native/wire_tests.zig": "d4aa46c65cbd4370105a3b15aea5a4c6f5c50f05de307a9a376192f273f980dc",
+    "test/oracle/swift/CSpicePixelOps/SpicePixelOps.c": "149470b69f413a2928eb6aa8c1be20b9e5239b70860e149ec87511e2f54469c8",
+    "test/oracle/swift/CSpicePixelOps/include/CSpicePixelOps.h": "ecd5db5ae115c5558605197d31d2d67fe476c6c1ea52ca014611a03ec6ca9080",
+    "test/oracle/swift/CUSBRedir/module.modulemap": "bd622488e2510407ee44d4797b2fa657456140f1c05294a77e6b869020665109",
+    "test/oracle/swift/CUSBRedir/shim.h": "4fe08a6a32b585ed1fe9e3ff8f945e31347ed70b6172746c97273df52a41d6de",
+    "test/oracle/swift/CUSBRedirShim/USBRedirShim.c": "1585ba2bc1cbb418e2622bef5123724295425e7d9b3e7c31117a768713db1b84",
+    "test/oracle/swift/CUSBRedirShim/include/CUSBRedirShim.h": "ac792f57f632464df37329a397de12eb10c201f8718acc6962b4363c383f07a5",
+    "test/oracle/swift/CZlib/module.modulemap": "6428e9a18fd7035ba979644d6cb4b1e3460d8f6658dc1043436335bed4537ec0",
+    "test/oracle/swift/CZlib/shim.h": "f7f4922b4f51622bd88817faa0b868dc3882571e20219cffe10a7358edb69ccb",
+    "test/oracle/swift/SpiceChannels/CursorChannel.swift": "bb11f65868ff01fe819fe9cf3f8d27a6b0d238f0dd45bf5793dccecc1fb799cb",
+    "test/oracle/swift/SpiceChannels/DisplayChannel.swift": "547d6fa3d882d41e189c29db6ddf5c9637d6101d880e12c14542273cb1cff841",
+    "test/oracle/swift/SpiceChannels/DisplayFramePublisher.swift": "b18351d139c140a90d606e55c2cd5900d7f9e9da6109baf88b191a2ed3f8f4f1",
+    "test/oracle/swift/SpiceChannels/DisplayImageCache.swift": "84e6a1e5470b0ad33fd3edfccd54396a4064bca089154a8828a290b1548803c9",
+    "test/oracle/swift/SpiceChannels/DisplayStreamReportWindow.swift": "9abadfce2366e2b46f37c57fe281fda1cd18a423b0db7244d6a4faf97fd057c8",
+    "test/oracle/swift/SpiceChannels/InputsChannel.swift": "1223fc444b9c54d95a4c4b4a79b4d5814c356f003f9edeb86b5e51f8769ff69f",
+    "test/oracle/swift/SpiceChannels/MainChannel.swift": "d1cbb2ee5cd03ac0fe1dcd534f5c199ba3f1ba33ea4003905f544d3749adeaa9",
+    "test/oracle/swift/SpiceChannels/ManagedChannel.swift": "fe9b60b6897d745885563ceea9b35debb920bdad62dd3d0c853932d25fdb9548",
+    "test/oracle/swift/SpiceChannels/MultimediaClock.swift": "372d03d78636c0cf7d152c94137d8fcd0c0be3244250732eab681118f2847bea",
+    "test/oracle/swift/SpiceChannels/PlaybackChannel.swift": "d9f9cba5ce26a0e902e07e2a20671aac5025a7f90ca379f04d7dea091b246752",
+    "test/oracle/swift/SpiceChannels/RecordChannel.swift": "e15f50bfb559fc8b26daa439f989214a133555927be114c146f356d3be0ca32c",
+    "test/oracle/swift/SpiceChannels/SmartcardChannel.swift": "59d762c185cbf40a02e1b4433f8ef369cd41d5719faf8d46260d5957c5158516",
+    "test/oracle/swift/SpiceChannels/SpiceTimingDiagnostics.swift": "c65cae64947a7430249e3e08ec925104079b4bdbe291c721826a341fc620dc52",
+    "test/oracle/swift/SpiceChannels/USBRedirectionChannel.swift": "1cd49797c9b4a43cf0640078ff209a19a0286958b9d66b4c841d142caba3c402",
+    "test/oracle/swift/SpiceChannels/WebDAVChannel.swift": "f82bcb9f5dcbc58b80e41d7abb8dd4cb2b566642ae4478c2e399c194b72c3c01",
+    "test/oracle/swift/SpiceCodecInterop/QUICInterop.swift": "fbcda2b45187c3329f65defc847a4950bdb71aa72a7f055df2b4039fa47f003c",
+    "test/oracle/swift/SpiceCodecInterop/TurboJPEGInterop.swift": "301bb555d4de645b885a3cb73e4338233234b3494257fca8334eeca04fc9b27e",
+    "test/oracle/swift/SpiceCodecInterop/ZlibInterop.swift": "7627bba316d0601dbfa52a150d01a00e0585ac71744f61be9fbd140779717adb",
+    "test/oracle/swift/SpiceCodecs/AdvancedVideoDecoder.swift": "7a28943b85d2c0975f2c9725019281484f3bc5bf1daa8033fabd200f4ea543c6",
+    "test/oracle/swift/SpiceCodecs/GLZDecoder.swift": "55825b14a128bf441764c5d06246b750fd09b8a8458ed77115e9a9da6d60a6f3",
+    "test/oracle/swift/SpiceCodecs/LZDecoder.swift": "004f11ad269ce6e403047b7b2cc5abb00fd4383a32bc4d442ddd2db9fd731e40",
+    "test/oracle/swift/SpiceCodecs/QUICDecoder.swift": "999fe2a9da4d1935fe8ec962730aa0074c6e3519c705d8cdb31a2f0da8875b29",
+    "test/oracle/swift/SpiceCodecs/SpiceCodecTaskExecutor.swift": "d1b7851b7701096db317cc780025cd31f8f3d27c721e7c54d97a539f088bd7b2",
+    "test/oracle/swift/SpiceCodecs/SpiceImageDecoder.swift": "ed6fe123eca71bd573c603d7bfef87a1c9b3f0d250bedc11b4b2298c4e2c661f",
+    "test/oracle/swift/SpiceCodecs/TurboJPEGDecoder.swift": "f6deb3a79535f2250f440ebc4fb80c452f9ed91688ee034786ee39f062d08126",
+    "test/oracle/swift/SpiceCodecs/ZlibInflator.swift": "85cde081f0609d55a50ef81adb8280fb3a0bd9e9bab46ab24930f3d637b719b9",
+    "test/oracle/swift/SpiceCore/AckController.swift": "9fedb6fafbedfbacbb8274062f19b5794eeb4855ef671ee79704f6cf6cdf078c",
+    "test/oracle/swift/SpiceCore/ChannelConnection.swift": "56dea46a55d4990bc87ec03fd8684c477db1c2dd37cc46fb9df00e48e7d4bccf",
+    "test/oracle/swift/SpiceCore/ChannelError.swift": "2979c0b04bb22bf2857f8cbd7ddc43d62b5b9375ed484169b1b2b8cc1b404184",
+    "test/oracle/swift/SpiceCore/ChannelFactory.swift": "c6341fab5afd55df7dcfb570e258e2a72232d4f002628ce0f00d20e0140ddf08",
+    "test/oracle/swift/SpiceCore/ChannelSerialBarrier.swift": "e7a4692db7d05fca9736d4fdf37f0b1f33b036232cde78d010f3954f85ec2885",
+    "test/oracle/swift/SpiceCore/LinkHandshake.swift": "18697ad7b1296f8fca63f4c1fab0b991d34f5937b5b03fa2bd9bf02f3d7eb380",
+    "test/oracle/swift/SpiceCryptoSecurity/SecurityTicketEncryptor.swift": "4b1f68b599b89a7a9baa50a9dc0c0e385d6a6f76c84e1f2c9c5f4475879f769b",
+    "test/oracle/swift/SpiceIOSurface/IOSurfaceFramePool.swift": "c68e61999537665cc5b5b01661e675d91313211caf9976d7f6ccae3b50f511b3",
+    "test/oracle/swift/SpiceIOSurface/RevisionedIOSurfacePool.swift": "05fccb493bdc3368c7f01623fd8a3bbedece3f149aded915789bb627dd8f17b3",
+    "test/oracle/swift/SpiceMetalCompositor/Shaders/SpiceVideoCompositor.metal": "0db284356f05ab612e36f004285f64633f701bb55c9d8d0fdcf62ffe1e550bcb",
+    "test/oracle/swift/SpiceMetalCompositor/SpiceMetalCompositor.swift": "a2429b854dbf9a104068c8847522ad0d74f2ef1fd534cd56357815a3bb064dc3",
+    "test/oracle/swift/SpiceMetalCompositor/SpiceMetalShaderLibraryLocator.swift": "3f6a544584594817a8f42e0cdaaf6b872ca1040958a3306ebc7812584e06a478",
+    "test/oracle/swift/SpiceProtocol/AgentProtocol.swift": "3bfb522dc800b1cf6597704eef7236b1f47c9ad06e84e31c5115c200fd8fbda7",
+    "test/oracle/swift/SpiceProtocol/CapabilitySet.swift": "d8a63b68b53bdd28acd79935b48f828b97738886959ecb53ef847dc9fbdad6ac",
+    "test/oracle/swift/SpiceProtocol/ChannelMigrationProtocol.swift": "1618a8f0caaa6f8b590d9fc948733615bbab054c23cf7e8b37279ce32bab402a",
+    "test/oracle/swift/SpiceProtocol/ClipboardProtocol.swift": "b4c4d2a49e9eca0b154bc2aac991105e580c17939c3c7bc7f2ccebf9a7b53530",
+    "test/oracle/swift/SpiceProtocol/CursorProtocol.swift": "193cf8b038547bf007c92458de4af44c28d2a58bf5df14c10bd3ac7465a229cd",
+    "test/oracle/swift/SpiceProtocol/DisplayMonitorProtocol.swift": "58231710c9cbb73e9df4e3d9320d4ed6a50fb01d32daf1fd85950af14108b4e6",
+    "test/oracle/swift/SpiceProtocol/DisplayProtocol.swift": "f8888cf265c8e2457b388c21b45b2538b9b2b9ddb9c23e6146a912a8a13835eb",
+    "test/oracle/swift/SpiceProtocol/FileTransferProtocol.swift": "7ca56f438c272a54c6b4b47feae7164b1ddb0343d4d28211c7526949352fb7e2",
+    "test/oracle/swift/SpiceProtocol/GeneratedMessages.swift": "c93782fe877cc421b1994dc5db866a14908a0acda818ccdbc219df967d9dfb94",
+    "test/oracle/swift/SpiceProtocol/MigrationProtocol.swift": "5bb027f50465af6c3a9358f36caf82999c211979f815b7b56f7fdc4ecc708f17",
+    "test/oracle/swift/SpiceProtocol/MonitorProtocol.swift": "1d3f495852fa540471acbef47e0f214279f09550740734a1a1c0f7f6bff705a3",
+    "test/oracle/swift/SpiceProtocol/PlaybackProtocol.swift": "4c7bb4ec37bed5b15dd9ee7fb37eab1499dee87941f2a84290f57717d8168623",
+    "test/oracle/swift/SpiceProtocol/ProtocolConstants.swift": "31132360fdc59bc0ca812a281d33255fe58ffb881545d488ebc51d9e509c63e9",
+    "test/oracle/swift/SpiceProtocol/RecordProtocol.swift": "014708b88577d8f5b20a78b324e5bd47fefbc585722ec7809cd2bbcac1a8c164",
+    "test/oracle/swift/SpiceProtocol/ServerMessageDecoder.swift": "7a642dddf34bb30ccc5a9e571f0468c07e169b9c9a788a5d131d6ba7b78b0afc",
+    "test/oracle/swift/SpiceProtocol/SmartcardProtocol.swift": "a298254892c1acb73ceaae80e7510c7b7b5299b2f4c932fdf868c8cb5be0f825",
+    "test/oracle/swift/SpiceProtocol/SpiceVMCProtocol.swift": "48376379e42505e8d181fd027742efad04ce5c26bbaa14d3d74d32d711d0720b",
+    "test/oracle/swift/SpiceProtocol/WebDAVProtocol.swift": "61f1a5fdbbc134c02c78fc60f69c56c9161e40fc8fbee6259212fb2eccda49ba",
+    "test/oracle/swift/SpiceRenderer/PixelRegion.swift": "44a2c07f973f63ddb05802289dfc60009bcf3dc2ab9ab51d252dd25d68b51c64",
+    "test/oracle/swift/SpiceRenderer/SurfaceBacking.swift": "5f378ec289629ef6629371791df85511d47e5f317933663fb16ed64c7572060f",
+    "test/oracle/swift/SpiceRenderer/SurfaceStore.swift": "36aad17c269b6735d8446653a89ca9fd8f00b0096ca1c5086871c5d27ec03df9",
+    "test/oracle/swift/SpiceTestSupport/FakeTransport.swift": "65dbd0d42831ec6ba7e054c37e625bac65b813b8e69266490351392e30a835ad",
+    "test/oracle/swift/SpiceTransport/SpiceTransport+ExactRead.swift": "e8dee46cc34effc8923517c33ca875b9dba4d08a10e34e3ee725c3f057fbc239",
+    "test/oracle/swift/SpiceTransport/SpiceTransport.swift": "5709e770c91e1084628f09638ce0e0995040ffca81f8858c6ff60132348b34fd",
+    "test/oracle/swift/SpiceTransportNetwork/NetworkSpiceTransport.swift": "79d93c17dc6ff759f8ea7618ec2cd0b4a5776f255227009aee8cd7cde17e369a",
+    "test/oracle/swift/SpiceTransportNetwork/VirtViewerCertificateSubject.swift": "89982a0dd749d4478896c57a7106f9f4848e94eaa2c4d7ce90afdb3005e2ef7b",
+    "test/oracle/swift/SpiceVideoToolbox/VideoToolboxDecoder.swift": "02b2fa4bda649c9f545899be82b01702144e642d957e8d02467cd6b686cd9df5",
+    "test/oracle/swift/SpiceWire/ByteReader.swift": "f6db6def66e399bec314beab2fa0151cdce2eac502ac96fa7cbda30b1e99ba2d",
+    "test/oracle/swift/SpiceWire/ByteWriter.swift": "90e13962759321eaa269f19edce25c337ae89aa87fddd7b1f9a0bdec50a349bc",
+    "test/oracle/swift/SpiceWire/MessageFramer.swift": "8a177f1056097fc8e8fd32aa5c978002e8ba855afaa9379147466bff88c9488a",
+    "test/oracle/swift/SpiceWire/OwnedBytes.swift": "f99ca867cfac5b03d5d5b91b26a5ff5040a2869916f394b3e5ee94e5094b0497",
+    "test/oracle/swift/SpiceWire/SpanByteReader.swift": "6462eb73fcbb56d8dec163d75f1c6d510f23e69f0de1c352b39d6be50b89a734",
+    "test/oracle/swift/SpiceWire/SpiceAddressResolver.swift": "d7d3d4bb008441941245ced3bf51847e184db19509b9c80b2ebd76b68089af51",
+    "test/oracle/swift/SpiceWire/WireError.swift": "1d9a93725a6e70d982641a943608ad7d12ee2639b9c8703f628ec0ac5d7d5c28",
+    "test/oracle/swift/SwiftSpice/ClipboardStateMachine.swift": "7eb06db1720d3a09d5bdb32fedd3bd505e1aa955d2a32f7f1d0845598524e87e",
+    "test/oracle/swift/SwiftSpice/PlaybackBufferController.swift": "49b39b3b7f0d55e4245816b79c3ffee32a40e2f38f435a3e28fb3ff4e9561b66",
+    "test/oracle/swift/SwiftSpice/PreallocatedAudioPacketRing.swift": "b1cf17e5446f6d56660352a0a19e8febe389827459fdee37fb2ce44eef26d53b",
+    "test/oracle/swift/SwiftSpice/RecordCaptureBuffer.swift": "e9a9dfb9e0b968d45419edaae68860c2dd080bdc9fca9e9fcf3cf70b7e056166",
+    "test/oracle/swift/SwiftSpice/Shaders/SpiceVideoCompositor.metal": "a8db0205876b1469b7e13e335a7bcf5b934dbbcfa24bedbe46ff8e1c1a53b28d",
+    "test/oracle/swift/SwiftSpice/SpiceAgentEventMailbox.swift": "464e12a9f7d1446dae7a94efb79cc5b80d0f00b195cf04a5593498952b1fd478",
+    "test/oracle/swift/SwiftSpice/SpiceAudioCaptureSource.swift": "77d8d147a157b0b47a92485aa51fc403a47f0ecfb56ed28dc94d874a4a60b9cf",
+    "test/oracle/swift/SwiftSpice/SpiceAudioPlaybackSink.swift": "ed16b15dd17644616eae593461d7a2db8a867846da994e86d9ea39dd9cc763da",
+    "test/oracle/swift/SwiftSpice/SpiceClipboardManager.swift": "f725de9e4ceac9368319f65b3e7c2222cdff9171d9c5dcea4a042db5e7d7532c",
+    "test/oracle/swift/SwiftSpice/SpiceDesktopSource.swift": "37cab76b1e8eb04aae2199ac992dae75fa24a05b42a7e7fecfd0a22651d3c977",
+    "test/oracle/swift/SwiftSpice/SpiceDesktopView.swift": "6b3350f98a0e56c6ca1e60a293ea7e844a21584a5068164dcb9237ff3fb28443",
+    "test/oracle/swift/SwiftSpice/SpiceDisplayConfiguration.swift": "260562caadcc0b1b660c7382084efef49f691600967c00f2b451ab5462707802",
+    "test/oracle/swift/SwiftSpice/SpiceFileTransfer.swift": "4b7f92013732a6bc6760e971f6247f77bd1ce4a3b002db358b7efee656ff18d9",
+    "test/oracle/swift/SwiftSpice/SpiceFilesystemTaskExecutor.swift": "3b5b4b7eb43efe2b52840d75e21d528d299893ef36eb3d74e1587061e48916d4",
+    "test/oracle/swift/SwiftSpice/SpiceInputExercisePlan.swift": "09b6c87d565435365482b0530bb94e17278705d9562228eccd48c9ca1a626362",
+    "test/oracle/swift/SwiftSpice/SpiceInteractionCausalTrace.swift": "7db04e0bdaec8387bf4e933089ccaade5c42e3e57fbe897f9d46b772e6df1318",
+    "test/oracle/swift/SwiftSpice/SpiceInteractionTraceCollector.swift": "14b8a81e2aefedddb475119161be56ceaf2cb47c3ade20b83df42ce77ba0dab9",
+    "test/oracle/swift/SwiftSpice/SpiceMetalPresenter.swift": "6102fe9e55241cb996d8a569b39c820efa4e0838c122d27c7e9e9c4ce23b31da",
+    "test/oracle/swift/SwiftSpice/SpiceMigration.swift": "70e6da0f3f674d4c696d8e07a275908d9a106a1e3f164e5127754faef34d63d6",
+    "test/oracle/swift/SwiftSpice/SpicePasteboardBridge.swift": "0e8a0f7f7cf5e813e278c1749264e3c5f6dccfadc21c2b9c5a4e82cd93e8a2b6",
+    "test/oracle/swift/SwiftSpice/SpicePresentationDiagnostics.swift": "3f19515e0654d2e38144fad4c3891475976d76b1fc39e4d3d6545cd0a84d40a0",
+    "test/oracle/swift/SwiftSpice/SpiceSession.swift": "3da76aaf7f38001f373d79e9cfa5f7d6cd331cb87a97ce4fb55c22c4835b1ffb",
+    "test/oracle/swift/SwiftSpice/SpiceSessionDiagnostics.swift": "f75d722ee5a6e045a8e919eb5a3e1b9d20b5bce33353074e7210a5cd76ca339e",
+    "test/oracle/swift/SwiftSpice/SpiceSessionEvent.swift": "19cfb92d651351094ed86f264757b58b2cde1b9b4c780f1d9cde809fb656a549",
+    "test/oracle/swift/SwiftSpice/SpiceSessionEventMailbox.swift": "10e7a2e13b1cf5a2166349f8be70189ad3a4eec1555da01374a381a77eed891b",
+    "test/oracle/swift/SwiftSpice/SpiceTimingSummary.swift": "f471a466b7e8baee095008fcb01c613fc0d874d745fa33e22836cd1349bfe7f6",
+    "test/oracle/swift/SwiftSpice/SpiceUSBRedirectionHost.swift": "3e130ece23aebe706480e750c29158cedbb34220116a95b94eda0cc99f0b81ed",
+    "test/oracle/swift/SwiftSpice/SpiceWebDAVServer.swift": "6147179905c30d5dc1c8ab0eb65eb2285d9d80cb35562a4904d6b5f94a194c9c",
+    "test/oracle/swift/SwiftSpice/SwiftSpice.swift": "1c527c19b2e0e93f014f647709c485147926d62ea9020c9761a5c622b18db522",
+    "test/quic/COPYING": "592987e8510228d546540b84a22444bde98e48d03078d3b2eefcd889bec5ce8c",
+    "test/quic/Reference/QUICReference.c": "131e241736b6577c2f4ba01b185373164fdc31de71f39cd9d4669f1b533fa989",
+    "test/quic/Reference/include/QUICReference.h": "216af2eae7c16ee7b6fd3846aeb132cdd2f8501c8ed7111f76f6d7a96cc0cecf",
+    "test/quic/Validation/abi.py": "a7a4ed99dffae81bd09199133cbcd02de14418b72f71648a5dc954391b376d72",
+    "test/quic/Validation/abi_consumer.c": "fccbaa3b70192874a445cc771c9d1d143ba8e55acc23f7a024059be203de176a",
+    "test/quic/Validation/audit.py": "cc46103505125d0f77b465772511b1248f816a66ff674a744c247e38215c03e0",
+    "test/quic/Validation/encoder.py": "fbdbbd2a81dc45352facedc5fa49a353f40f4fdce1b1e3b1aa1cf38cbba84dc4",
+    "test/quic/Validation/reference.py": "708914bc0e624b141addfbfdc18d837db111fabc6b83070acfd208215545a089",
+    "test/quic/Validation/stream.py": "8123a815f8a402f9355c53d6779f2c8af24d92b355830233a52118a9f09f46f6",
+    "test/quic/Validation/stream_reference.c": "2334290cb6456cdb6e3478ba05b7f9012d077efc089ce16eb92cacdb53e42b3f",
+    "test/swift/OfflineSurfaceTests.swift": "fdc57a71ad21c10de238665fbadd25f6152671dcccce37ea2c8318e6c09046e9",
+    "tools/audit-dylib-links.sh": "1d6897e6fdd70eea51f4c48d02c03618d9d354b8c01f2792837178c6258b3eca",
+    "tools/build-native-dependencies.sh": "4111812695b395f7c1a5d6909d8aeba9ea02fa3364d5e010469a00ab2edf282e",
+    "tools/build-quic-native.sh": "b2d6a8da0d3449a88e9c602e0647e3875153a4f55aea3d0398543e6d97c70e21",
+    "tools/build-zig-native.sh": "f366fbf540a5598d9b2fb5334a633916af53c5e7e25d9ededfeb3ef2d2100e7b",
+    "tools/package-apple.py": "6bb84573dafac8252a681fd65bb981e81b8eb3f7d71d30bc7bc9b0bf24d98211",
+    "tools/protocol-generator/main.swift": "49c393b6094b583507553dae4c45b260935db8f43d533964ac7aca7365e385f2",
+    "tools/validate-installed.sh": "cd8529770d1b89c6821f35239ddd23b04c2d2ef21838f2a061b274b5af672e0c",
+    "tools/validate-jpeg-simd.py": "cc5d8163931cab51fc4f3384a87606ec4031be0c7178090ede34d2653d71ad5e",
+    "tools/validate-quic.sh": "af251b16570de403abc55d01e730133ed2b559a97a6b49a7d79ffe99788d86a1",
+    "tools/validate-zig-agent-services.sh": "4aad810f893d34a03013b21d1bf25acb1a659d6b33bd28ef233532ed2514e8f1",
+    "tools/validate-zig-audio-buffers.sh": "e6bf09477f476f976c40fe5d2e2e10e506eef01458f0e4535dd1fbaf8d26fbfe",
+    "tools/validate-zig-audio-native.sh": "b4c79ddfd245d67a8dc8a9e924fc950818ce2b1f27bb1e4767293afd42868180",
+    "tools/validate-zig-diagnostics.sh": "886c1e6a1bc4cd7cf8747aea11751c385da5c90aff7c7f9d928392ab667dae7e",
+    "tools/validate-zig-graphics.sh": "50ce5b28c8bc5a7819dd25a8a17dbffe1142de0f5ff089662768b8f9414acc92",
+    "tools/validate-zig-host-input.sh": "8afcf628f76178ddc77258dc53699394514b08d45fdbab7671c8056c45746549",
+    "tools/validate-zig-host-view.sh": "ecaea6d26076f42ae3c31e56220ef894093a5d664bdb791bc72289c5574ab70a",
+    "tools/validate-zig-native-presentation.sh": "dd9d58d590706a2b24e6f77adad94a370a97176c5c92389036be9866fe8142c7",
+    "tools/validate-zig-package.sh": "bfe8cafd957a235bfeef0a082af4d42eae0772ba7efbe7dacf0e71f9da79cc15",
+    "tools/validate-zig-pasteboard.sh": "f8263bcae18a6288050d67b6c7420dec64b83a4c3bd4274ac55044ba358101c2",
+    "tools/validate-zig-presentation.sh": "a941db7af040046347c1af74bb0fbd1ebd41af18936871561eabefb29a168b6b",
+    "tools/validate-zig-swift.sh": "cba2155e0c3e11168902f65c25ff5d58b02ed7d83ec82b9d54e8c385d497f369",
+    "tools/validate-zig-usb.sh": "4e9a13933483b442fbacb459e043033ff18849f6dc520c7c2f539e33c9a2206a",
+    "tools/validate-zig-video-errors.sh": "3b49a68e193f1518fb624d7edbeff99be63807f8cb6dddccb1eedc48a424b5a4",
+    "tools/validate-zig-video.sh": "bb9176b2ac1b7159e2a13952e353b6fef1cac2091e2e901e3edd55eaa5468adf",
+    "tools/validate-zig-webdav.sh": "eeff8523619e450befadbcaca0970661014d4d4762584037f899d2c3d28521a9",
+    "tools/validate-zig.sh": "02bc3a54bf42baaefbd76dae9dcf28f353582553105a2ac0eb28bae26037edeb",
+    "tools/verify-native-closure.sh": "f4ee295217536e9c48fc455ed4fee361cc975a30e819ab88461a066fa0669989"
+  },
+  "logs_sha256": {
+    ".build/migration/native-rebuild-final.log": "99c87784b9ba672b929a1effd7b189127b29d6d5e0c2f20b82017bc7aa6d0c31",
+    ".build/migration/core-final.log": "5d4cdfcbbdde3b21995f0318999646aec7fe69c9ac748d8eea35d26059b0d109",
+    ".build/migration/installed-final.log": "f8e58df99759b55978312fe40c121123d8830af51994f6aceebb5a386a2c2dee",
+    ".build/migration/package-final.log": "ad188db2c631c9af96b78d2ba0606fcf9bcba87d4ad70ad82cdb3433e63f6f5c",
+    ".build/migration/swift-tests.log": "ce39c6e60e4dd6f487ca292cd06d480b5e4b8e173694cbce4bf00573b7dc99c8",
+    ".build/migration/public-api.log": "0eedd4ecb27a3c015dc1a92ed61684239735b51355fe82ae039dfda5a7959ce3",
+    ".build/migration/quic-final.log": "c41716f0607d02066373e7eef6c262f6a9173b0704d66c3bd1b32f6b997b6ebc",
+    ".build/migration/jpeg-final.log": "95bb1a1c075a5d95a51ef009dac3d87e6927ddabb495ad5ab77b33414f91cd19",
+    ".build/migration/video-attempt.log": "d2be05abcb2c185c838bb9a5476e4cb3ef380f52e6ba9b318e8f413c72c29599",
+    ".build/migration/clean-checkout.log": "63810b1a61e5aa5a5c2cc35b00d90f817166ac114b1df7304c8e84547fed7cd5",
+    ".build/migration/final-build.log": "22f80b7a261e0b8d82841b305767de04fd6a1f02b8cd717f63a0e8a15192326d"
+  },
+  "reports": {
+    ".build/zig-migration/video-validation.json": {
+      "sha256": "c4ee46362e248865fc7510be73f45a418067efb6b4473485b9b77326081bdb82",
+      "result": {
+        "result": "passed",
+        "configuration": "Zig 0.17.0 ReleaseSafe, arm64/macOS 26 target, actual local Apple hardware",
+        "integration": {
+          "synthetic_swift_exact": 40,
+          "result": "passed",
+          "fixtures": [
+            {
+              "fixture": "h264-baseline-128x128",
+              "max_color_delta": 1,
+              "hardware_sessions": 1,
+              "retained_after_decoder_destroy": 3
+            },
+            {
+              "fixture": "h264-high-128x128",
+              "max_color_delta": 4,
+              "hardware_sessions": 1,
+              "retained_after_decoder_destroy": 3
+            },
+            {
+              "fixture": "h265-main-128x128",
+              "max_color_delta": 2,
+              "hardware_sessions": 1,
+              "retained_after_decoder_destroy": 3
+            }
+          ],
+          "parameter_rebuilds": 3,
+          "scope": "real hardware property, fixture pixels tolerance <=4 (existing Swift contract), frame retention across decoder replacement and destruction"
+        },
+        "native_sanitizers": "36 native valid/truncated AVCC ownership cases passed with ASan/UBSan",
+        "source_sha256": {
+          "src/vmc.zig": "01f2fe48330f8e72e4ae1fd1b700dbde3a194b2d10f60fe2be76c318c177f468",
+          "src/usb_route_abi.zig": "2fbd4fff3f64e09b3978a74c51895e310568b1df63fd6aa4b5761afb93ac0f51",
+          "src/interaction_capture.zig": "99302e683e4e1d6c91af2fb361403ba99e66bc7438e25aeca86b5e3ade9b9af3",
+          "src/glz.zig": "a5f0f1999968e3cb42b3d3a7bd28e8550bfc89f4ec6cb547016f1272ae9a0821",
+          "src/file_transfer.zig": "9c2def65ca681b3f8384349218856a7d5d638ae0d5832191452dba3b55f5e076",
+          "src/tls.zig": "28964109bb70435934e5af73f6ec5dea5d5e774b0eed497eddedac4a02be079a",
+          "src/supervisor.zig": "73408e23969f1aed0a8a91e51271bfc98561bd62ec7f0ccdbd022b281051ee7f",
+          "src/audio_runner.zig": "67c55522b91fa708ef5b0cda842d263fcdd67a929002452124656ea414bbc4dc",
+          "src/desktop_source_abi.zig": "7c7d7cb61dc481d49ec051b0c0dacdd5c6005e19df160a7fdfb50e38bed9adcb",
+          "src/image_cache.zig": "8211d4193005b8d5c44e0c86141f820b411aa28f35098ec4378d064ef75af549",
+          "src/presentation_diagnostics.zig": "58fb64e79d783d71abb059940cffa468eaa556121885ab82c6eab29bea72a532",
+          "src/interaction_marker.zig": "a052982927a9db26f27575e53b53e84eeb38b771ec77b92680008e0a0a76efbd",
+          "src/webdav_server.zig": "2a887662e18a03da7c04449ec38bf4e962452687659be58c9d3c5d91afe05520",
+          "src/display_service.zig": "788e3d597c3f660329b78240d03af122ab162fb8a4ab2c31b7e8724726ce30ac",
+          "src/agent_abi.zig": "16a359367483baad3ff6237ab32e4bde8ad28e8edeecf18b783fc1f2ebe4bab5",
+          "src/webdav_abi.zig": "d0d2610b6443da5422147528f2aac8b975f6386489d7d2973eb792988234c1bb",
+          "src/video_failure.zig": "807e2ee48c5cd2755606ecb685bab4184e0c77ddefccf8d9401e11b9251f25c1",
+          "src/session.zig": "23af53c675e416fa8456544015e03c04272cb4e11abfca52cc71f509ba3b34b4",
+          "src/native_codecs.zig": "e933cc3e7db81872a16b983caab1da41d7fa0e698bba32cc3f9552c65a292abb",
+          "src/cancel.zig": "8c39b12c6b17023383227e6b6f794b24d199758235bc77551d5fd05dd89f9f1a",
+          "src/desktop_source_session.zig": "f2c0c11edd102e945f3e426da7fba1ceeb44d2959672087e69c5bf782e0263ae",
+          "src/ticket.zig": "f99f089f9f41942703dabb08a8eaf4c7489097b3bd3aec11b5d1d499bcc69563",
+          "src/webdav_queue.zig": "eb02e9e7d7f0470ed84b7672769c7958bba4c6aaae12e502690ed01d004c6421",
+          "src/frame_publisher.zig": "545780b4ba866160ca939c6b0e99252545929739b0416b77634d87018b7d02d8",
+          "src/inputs.zig": "f37878c3974cb8f40096b089b8296e518153c3b1bb5ec10926835d5c413e8cc6",
+          "src/graphics.zig": "db19d2b80239b44b525c7d662182202f0a3eebd4bbbf9c4a95927e98ede3d85d",
+          "src/mailbox.zig": "304213395e14689d59f06e58f765da2fc1edf397f88e13d3760a4b8837f1797d",
+          "src/audio_abi.zig": "8a93724c630867e5cda24febb7c00f0c46b6de1612f5349b6e48bed3de90a2bd",
+          "src/agent_services_wire.zig": "f81603f76b21e8a179f57f7cd4af6836fd2988c98a480f8edb2bb742ee5f4416",
+          "src/audio_buffer.zig": "3c4a83aaed9854d4e5842ed5e6656f2b6eba9e9cfc5c2f51a6be3a1cf0edf93b",
+          "src/usb_route.zig": "5847f34e236d778cf3264386a17ffcc27caae7d81b0e44c0d8f621c852e15cdf",
+          "src/session_abi.zig": "c8f828bb374c627de2f05eee6e00aa13769bf751596ffa23dcf9115b50f4e939",
+          "src/stream_decoder.zig": "06493617864a3eccab39607ef2fee82862cf823fe604fe09384e9dc68c5f415c",
+          "src/agent.zig": "e679ceda73ad0525293556d053f2c84f09cd0d2170e37a51564a1730971cbe57",
+          "src/audio_route_abi.zig": "6943fc5ce5f84f2cdef30af5c426c8fbb526e5bf729a52c0c48e3a023df611f4",
+          "src/smartcard_wire.zig": "a2abdd89f41c8f251ca1e353cd0a480a504136bd3656f00674a0b820392335d7",
+          "src/desktop_source.zig": "806e3c3d873661e84dc932f0b8c88b171bee44f42e5461b28ed8c8961d815cf0",
+          "src/interaction_waiter.zig": "01cb5c610bdc8f7f2e62677cf69d1ac8ae09c71704092b5c5a9e0d0d08fc8b7d",
+          "src/clipboard.zig": "c6a573270725b9ccf698c624c16cc5b7a1145e64ffac7187eda25614bc81de25",
+          "src/link.zig": "1fd9bb67407f5ecc8c0bffe4a8f8e6cf768e518e1797d1f793eef1a60f3f5509",
+          "src/host_view.zig": "5e6f53f32b3f0ab1e553bcc0c320eabe947283ce9a4ad06d40af3f6ef33700ad",
+          "src/timing.zig": "8b649fd8271603a8e9954711d0ebcd8377f734c2cb1e71649903964e2e6a7923",
+          "src/host_view_native.zig": "e7d679cdca92e290a81493580cbb304ec8c0658f03afc9c186a9f7c05f81b0c3",
+          "src/display_wire.zig": "c451bd46b76f1f8200090091c4667a2bbcfdf4db899283e699e323ded8c16816",
+          "src/barrier.zig": "65a0055e0dec05fc2c85e62995c601df9fe3453487cf9b1ceb5d8e8fb9bcba29",
+          "src/usb_runner.zig": "64cdf806c3ca09975c388a01dda1458bffe1a24980ac178b9a318179aacedc24",
+          "src/cursor.zig": "fd148f6b94280a5afc2015d05ab358f098d8d3abc16ed0ab3aa3dcb090b414ff",
+          "src/agent_session.zig": "9c117c6357cfb6860b33da06ca9eb16fbf026f97ff64b80caab238ce049b08cf",
+          "src/presentation_policy.zig": "01df2e6941672bfbdb414f018724d15005e780e84edcfcc11d9641c5a7f439a6",
+          "src/annexb.zig": "947ab51d8f44e8c682907902b63adb989b1096caedac59795be49541b6db25de",
+          "src/usb_host_abi.zig": "c9a9cad7ad9ba1203c12cb24aea1be75fcf300d1fb89808cf1dd87f42b7273a3",
+          "src/region.zig": "33029ea65341411e659a0a0526b4a869091d0acc991a8591f11e15fbaaa4b66a",
+          "src/child_connections.zig": "4e8c894442eef37cd68ce1b665ba13d51141ab51a539b2cf75444cd7c5446961",
+          "src/diagnostics_abi.zig": "9c276d29a1211b58a9cf69a72de82ed3dcfe6f489520d8c2c7a682b0997f13f7",
+          "src/surface.zig": "ef5a0086c78e0fa56898e461ec18d72470a387dfe3bca0cd71a50bfef8599a10",
+          "src/main_abi.zig": "8a5edc1edae01be36e79fed9277eba5b570b853ef27ca0e1b6a6cd5932cc7872",
+          "src/agent_runner_abi.zig": "4ecd65ed4d4f89c7879c49569d14bf968b2f556f54ced3f7cc8445c874db1477",
+          "src/agent_route.zig": "a84c392f936139c7a63c298243e93e2c81ac5ea9fb430720ad53cc5c72079330",
+          "src/desktop_child.zig": "92249c24eb9bb7e4c30caaedee17de2bd7ae1895dba673b3fc3593594bd827ae",
+          "src/agent_metrics.zig": "8b213cde1fec389e137869108652861111221aab11b92edc1a0e475d8a1d742a",
+          "src/flow.zig": "98fe203e656e3dfe5f0ff555eb5486a8df5e44fdde0cd69bf65de903a26e6fd7",
+          "src/stream_wire.zig": "81a89e7d6b6a88ec788b1caae58f37ef373a24357debd4149b5b67791df3283d",
+          "src/migration.zig": "e38ff02c2c27e317f06c4b354e5bc672fa0a08c5d6556ef8bf28de8a063c68df",
+          "src/desktop_snapshot.zig": "4df6c6e5db37759c934f6f6defc20281a6ae78fdecdc1ed0c2d969b34f6d041d",
+          "src/cursor_wire.zig": "42becd4cc00e5bc359ccf6b9880c0df1264ee9007e122b74ed6892596c437c4b",
+          "src/webdav_path.zig": "44f81e1b826afc06b7782fa4b8a54bbb1543fcfb6aefa1701d6403266c341cc5",
+          "src/host_input.zig": "95eff86d577a3b276141638819e9381328f3f9e14769adbb32d6f19de6c9887d",
+          "src/lz.zig": "079c31c706ebc3dcd22390c147806f8aef4e3645b8d362e92813e00da1bc7e09",
+          "src/audio_send.zig": "3dfb77e4174c8e65901867e80d8e16f87ac93df14c62b182b5d572eebcef0261",
+          "src/usb_host.zig": "46ce40c1a8586ec1ad2756253e9e9722cc9a06bee2fdfd3cacee5ce4f9754684",
+          "src/webdav_route_abi.zig": "ea889fb91630003d34133f6412e8ad75236feda69c33f4614ef795140704ddb1",
+          "src/image.zig": "7a8a20da658c8b4c0725fdfb8e8b38232e3cb8186f0a0112b68ac4b4724e488e",
+          "src/webdav_fs.zig": "3a864c79701dc76a372b20c58958617b628946994aa53cd3575097145ccac9e3",
+          "src/subject.zig": "8636795bead4a0e8243fd4b27d0b9187c4934bd9655f31853069bbfd629cf489",
+          "src/pipeline_abi.zig": "215e7ce3a1241a39ddcc79178fe0dc82a5efa7e37522767a73e5a3a650837517",
+          "src/webdav_http.zig": "35d5fa75d624e578e27ce4e23603562a33352bfb2a579cec1b99cbd487d5de12",
+          "src/agent_manager.zig": "91709b90a3f1b7cdc0aaa3bae07d126b0f01a897197921b985afb8666bb065a2",
+          "src/surface_budget.zig": "143b80568412e9c64ac7c4515a2c0e5d4e228996bec17b6722241246fd2e57d4",
+          "src/file_source.zig": "3f9721f5bfa1dbfc902b714490a6d293c890f31d2b1737e9beaa999d4fd47fe5",
+          "src/stream_scheduler.zig": "3f3e392a0ed0d1c671d32a55120121bec441159bea5773131f1610ee797d4cdd",
+          "src/zlib.zig": "f80ead359a5b8dc3fdb863f0c59050dbd67b41f8baed155346883e019b1bef35",
+          "src/smartcard.zig": "f56530dde14e26f9174fdff2085d53f6b14dfab833bafd797220d5295e9e07c8",
+          "src/pasteboard.zig": "ee03c29502e2cf461d08aba095c06b5f160ea13a7bf27f6aecc8b6d921d14c35",
+          "src/audio_wire.zig": "6655602d94b92413d7ab224d0bcfce7f77376571552e72dce1c071965a011640",
+          "src/presenter.zig": "042efa328595e2b02868776bb67c6ba0be486fd60dedf8027fc0bbd05872c5c7",
+          "src/audio_native.zig": "104ffad608c964527d08a949741d664e2cfe45fc2dd9c74b979f5732479578d3",
+          "src/display_child.zig": "d72fba17652b7bd6c63c5825699cb6496ea7f46c4e71370c3b303ddbb8df8c41",
+          "src/network_abi.zig": "5db6a9bff30adb941144a5d52d4700963e0fc4ea18ce53f40ec7448b98814889",
+          "src/interaction_trace.zig": "58434db4603637bf9a885924d3028982835fd23dfcc4cb3997557217ca7a73c0",
+          "src/webdav.zig": "8b2cc8ef975dc9e0f7dab9baf372b289d5cd20be2810d876cb39656c54691e60",
+          "src/lib.zig": "05bc3a6a9627bea2898a64f3a50590691f471b1ea16851c6634eb6b3e630b3c2",
+          "src/framer.zig": "6da42ddb18ad9310b859863286c3b22592d7815f33d6bb673db672727a8b1c6c",
+          "src/display.zig": "7094f1f4cad6f424ea5f4a520e2a41a0778b88633c62a208478db81e8876b4f5",
+          "src/abi.zig": "bda36abe93b8ac9233a35774b005f507c48a32a6f0b9047cdd280c349952745d",
+          "src/bytes.zig": "1bc7bacc69d425b98de277d5183d07abfa49b5e1db49d06097f5a6b90c1cbaf4",
+          "src/video.zig": "0afd36eb107d9dc9c580f202b0ea6c2544e594c303c0dfd648c840fb41a79d52",
+          "src/agent_runner.zig": "d0dec8fe9f5f3e96832b2b4863ac7e965865dc8bfe14dec9a3442439f291f91f",
+          "src/monitor_config.zig": "d978dbc11c08a1fe1059b6f9ceadbfee1377e9ec5a5d3e99db5be03a7b4ff1f1",
+          "src/surface_metrics.zig": "1120362c9f8f8af7090d7d3d1ed0e88b685fa49d27396c5034b2c2c9f7f738ef",
+          "src/protocol_support.zig": "636799cedb94dce9678663f22b80dc2ec9c8392e8bdc78c6007d1a5118aca6ea",
+          "src/codec_executor.zig": "4396d4967439950762a98d3ab4d44dbf6cca8930e081e3451f4abe3d8cdb61c7",
+          "src/root.zig": "d72ed388fcb8cd04242564eb9d6df3e31e38abd1e6fb88bd1a2a649b63054ebf",
+          "src/endpoint.zig": "ae4534054eb0d28e9e0ac7dc7ae99db978148a3c1e6fa7090aa074162c94308d",
+          "src/interaction_record.zig": "d31677fb39248bcd3435d89751c45e54f5fdaf43e66f630c2f9c966da4632247",
+          "src/sync.zig": "23c0fc6fe491b12b8f6c8eea342bb3e42d0a3b170cfd7397af2c75a64e49df4f",
+          "src/migration_coordinator.zig": "dc35a4425f8726419edfe363fb57c7b0b14061e9e5a9a2c59838b654589ef2aa",
+          "src/audio.zig": "027704417b38c11455dd626b33a1c6ef46f8b46043516ae66c9819ad270bbe80",
+          "src/clock.zig": "ddd4928dcb21a5a2e620cce9e60216ece3a8efebd92261c641d4dfc3f4fb805d",
+          "src/desktop_abi.zig": "ae0bced201ae2a0216f3034735922ad921bd6eb676fe316426f56798a0d26be0",
+          "src/audio_ring.zig": "b374c598fa50a6cbc264c03ce961f25a079f94f8723b0df643b9818a1afcf8b1",
+          "src/webdav_route.zig": "5f216386831f7d4078af84bc160c3295c8b9be38fc25f7fa0a3341f051343a4d",
+          "src/damage.zig": "2ad182f2518b7ff72eef1757e91b3339f8ca207b195ca46ccae7083de07519a6",
+          "src/main_channel.zig": "87854f369fd882d169c23f2110d8c34390e24afd97888861a081b7a9baa9a080",
+          "src/usb_abi.zig": "17f6440359f887711581a5026d9a7866e24abfbfec76de530a4e4ccf444e8e8d",
+          "src/usb_shared_backend.zig": "d86f38ae4b2558878e918f6a7deb4ef6740e614fd29b5245ffc187f812788830",
+          "src/webdav_runner.zig": "ecf69e681c3effbb56b9f3f3388d0bee540830019f54ed6051b3a3a230b38746",
+          "src/generated.zig": "d9abfdaaea2f452c87c20ed08d05e8154f64e437f79af5289cf4b75d769289d7",
+          "src/agent_route_abi.zig": "f80f8d31daaec1014e8cc5da928ea6594b3b200a3241218ef2da60a2f56ccc12",
+          "src/interaction_writer.zig": "f2296587da1b12bee13a71059c8a48c06d8435c30ce358778f4bc6f04ef86be9",
+          "src/channel_control.zig": "43ce2af7294634dcb1714b219bc8869f44157bc3eb63b9ad0046eab2bcc2df94",
+          "src/transport.zig": "05afbdf2bfa941247b1a9164bc0544be719a18768ef19b9bd509c861513fe858",
+          "src/channel.zig": "85d6863fb6ddca6868fe6f5adc3f056aa25d038186bedcf7468980fe32044187",
+          "src/audio_route.zig": "6551ae4b596f2703b1409ff6717861f539f1afaf24d04a78459193dfa1891cde",
+          "src/build/apple.zig": "4e38b2b8b13db7331084e35723044bebc00df1a90cc079b925c268ce3e9f4008",
+          "src/platform/apple/video_bridge.m": "cc19c432d2337a8efe41e32a1113f75aaeb52cccc89223afc21dce1ba94a71a1",
+          "src/platform/apple/webdav_bridge.m": "fd1dd2a087d21d40aff54f64307b6bbc12f92a23a4a57d24ce416b2fff3cddcf",
+          "src/platform/apple/codec_bridge.c": "7c2a08b50bf0731992cfb4e9b2a7257ca9d0de2fd3402f318efc12c2879decb2",
+          "src/platform/apple/pasteboard_bridge.m": "7ca9f7bb24eb36ff1be35a17a2ee56d4cfa2b190d05316ffd1be720488306877",
+          "src/platform/apple/graphics_bridge.m": "3e462eb3a1a922c00d5afe15a88701d9bc5e4503871313a856db057b79a6c337",
+          "src/platform/apple/audio_bridge.m": "fea73c5cb86c4684fe124855efb352df2b77c90f342032ea15dac67a6dc55591",
+          "src/platform/apple/host_view_bridge.m": "71c82ae4920580610fec7e2ad238d819ff65d010d8335bfe91d166124ec41f90",
+          "src/platform/apple/network_bridge.m": "f6785b5950b5a3e001365dde3151bbe522738e3abc904e109efc776136af3649",
+          "src/platform/apple/security.c": "12a89ec84fe3109f26878641d0f877c6030369c6b708da0ded5502034a354f65",
+          "include/graphics_bridge.h": "3c25d08ab9d4ceef5104f1df0e09eade45e2bcf6933a5f156401c2f9dde7ada3",
+          "include/pasteboard_bridge.h": "84a689c56cc31f8bf79b1922084fba339dc28d935841e7cf92c97ec2fbb52709",
+          "include/spice_zig_host_view.h": "5dc3e1968eb4232adeb87d898137b90d54e2ce295f842d05fb55645072606225",
+          "include/spice_zig_audio.h": "047e7d7a54e5958ed15592e9e6a8996ca5858b9742c575913bb2cd3c1fe61ae7",
+          "include/audio_bridge.h": "f52559b6e7af73d4241aa031029c44aa145d08d97f3faea1df531c2debe0409b",
+          "include/network_bridge.h": "dee9913cd470fe29a4d72d970ed1da105a32ec426979706aebd7f2b9c323495c",
+          "include/host_view_bridge.h": "1dedb07e4c33ea0efb73b9ebb76d95e306fd02b760dd928099eda866a821764a",
+          "include/spice_zig.h": "f9ec65e334756d93702948fbce11f6659a18aea2af86f852f2a510a70657d241",
+          "include/spice_zig_pipeline.h": "48dfee83f4624cfd5262b23eb3c3eba1cf36011b0bdddc08e96927c5c25a9ebe",
+          "include/video_bridge.h": "f669e299eb06fcf1f9fab84d5b0595b1230591aae8fd46fbbd07e004b7b51a56",
+          "include/spice_zig_diagnostics.h": "fde10c4df44ea2b6da503446c468117e287b3dde2c83ba9ee50d66c15f3466ca",
+          "include/spice_zig_source.h": "e5af1e5d1c71517515273915ab73505bb4759508171f596f1852cc88c71151a9",
+          "include/webdav_bridge.h": "6b43fb3c1f19b12f957d840db79e0c63e8d65177c40ee923003052aeb275eccf",
+          "include/spice_zig_agent.h": "758e68ea933444b51697aa93edb4aadf0d707473050e584f723cb3c1d6052b9d",
+          "include/module.modulemap": "c05ecf8164b8ea565a6c445839c6b9cbd320c03c30a9d95bcdce4ca41963e9eb",
+          "include/spice_zig_desktop.h": "76b18ba68ea00a63095a8797c80ea00ef79403d9c3c7c60bbef7e5b6376da9e9",
+          "include/spice_zig_webdav.h": "f68239ba56c806ef0f725fb27551f108eb092246b53f4b2b5a9ba7284a38e116",
+          "include/spice_zig_usb.h": "23bd93b58f0a9c4412b762150b3c97b727de91eb1cd97fe1784e35e69246db29",
+          "resources/shaders/compositor.metal": "0db284356f05ab612e36f004285f64633f701bb55c9d8d0fdcf62ffe1e550bcb",
+          "resources/shaders/presentation.metal": "a8db0205876b1469b7e13e335a7bcf5b934dbbcfa24bedbe46ff8e1c1a53b28d",
+          "test/native/video_failures.c": "c1d1ee15f61a116ae51a9e8c63039930eb515f211a58977311f5c097fa4e8e04",
+          "test/native/video_failure_tests.zig": "102aad4df1e00e8e5f3023b20a0504ba53e8593cd7008415e8b2b646f7c66357",
+          "test/native/video-oracle.swift": "05a1c049c628cd3a267caeecc01df9f469cfd5289ef982bde806afabbc33d121",
+          "test/native/video_fixture.zig": "3e9e5d78b175b14776678f7528d1132bcf9a061ae29a58a8374b3b852f8cd7a9",
+          "test/native/video-integration.py": "4539cfb2e670a37b3dc66119a5754912e20df44739d40596736dada425c8bedf",
+          "test/native/video-failure-native.c": "fa7628850acbd061ffff5bf6f25442e909b780be6a2638060e633a31b34299a1",
+          "test/native/video_tests.zig": "77f44d7aab62643dcde48f5d0c5560cedc6f6265580363817e378a7ff343b760",
+          "test/native/video_probe.m": "ccd61fc38d1ae4aaae03f450cac78c3e1e91f1af829eefe36c9dfd28a39dc021",
+          "test/native/video-consumer.c": "df38d02aeb9437a501ff492b975eadad8d783d33381b134ece9bb9db371e1aec",
+          "test/native/video-error-api-integration.py": "72a945bbd031b4cf6382781f6322b3ca851560426b63634f57f7044394e47ba6",
+          "test/native/video_failure_fixture.zig": "5fd2bfeea0aa1a6c1fd6a5f4f79fd12a788501dd536801f841b9baf84d810521",
+          "test/native/video-error-consumer.c": "9f41686dda7f894e14f52b37543579c0f4c6fb0c57a970efd6646b86dc18b6e3",
+          "test/native/scheduler_tests.zig": "6848b9adbba5fdd45723ab59b913d808b5bc656a7a7a5e4c1d098d725845dc18",
+          "tools/validate-zig-video.sh": "bb9176b2ac1b7159e2a13952e353b6fef1cac2091e2e901e3edd55eaa5468adf"
+        },
+        "oracle_sha256": {
+          "test/oracle/swift/SpiceVideoToolbox/VideoToolboxDecoder.swift": "02b2fa4bda649c9f545899be82b01702144e642d957e8d02467cd6b686cd9df5",
+          "test/oracle/swift/SpiceCodecs/AdvancedVideoDecoder.swift": "7a28943b85d2c0975f2c9725019281484f3bc5bf1daa8033fabd200f4ea543c6"
+        },
+        "fixture_sha256": {
+          "test/fixtures/SpiceVideoToolboxTests/h264-high-128x128.json": "97faff01ba51ce64e145219d94961a53399de57f8f562e326a7070cf79d55eff",
+          "test/fixtures/SpiceVideoToolboxTests/h265-main-128x128.json": "9a063c5bd35957e14b70852acd5cbea6fbc31e5fc5fa9d9e3a4166cd580ee275",
+          "test/fixtures/SpiceVideoToolboxTests/h264-baseline-128x128.json": "798a464717f009e30a590378e35273eadda7de9c716328fb12010718a4bc5ad2"
+        },
+        "not_claimed": [
+          "Zig ASan instrumentation",
+          "real SPICE deployment",
+          "window presentation",
+          "performance improvement",
+          "complete library migration"
+        ]
+      }
+    },
+    ".build/zig-migration/graphics-differential.json": {
+      "sha256": "7c1bc02c633e09b7415cfba22418bc78d6a7510ea1367e286a96e4c66fe3a706",
+      "result": {
+        "result": "passed",
+        "mps_pattern_cases": 9,
+        "patterns": [
+          "checker",
+          "thin_lines",
+          "color_alpha_edges"
+        ],
+        "maximum_channel_difference": 0,
+        "allowed_channel_difference": 0,
+        "reference": "independent Swift MPSImageLanczosScale with clamp, matching existing presenter configuration"
+      }
+    },
+    ".build/zig-migration/damage-differential.json": {
+      "sha256": "1ca55082a94abd805af12f822160330d943336db9fd41e610793edf0b6374f4c",
+      "result": {
+        "result": "passed",
+        "cases": 1503,
+        "scope": "exact damage rectangles/order and full-frame threshold against unchanged Swift declarations",
+        "selected_swift_sha256": "9ffe937efadca3ccc0e30b791aaedd0a77a2345bacaf7c7e4650fe9bce7d3e5e"
+      }
+    },
+    ".build/quic-audit/full-decoder.json": {
+      "sha256": "bd98e8450a1b6ea7cf41b2cc66a052ab736903aeb23c9dbd6fbe92bec880f918",
+      "result": {
+        "decodedCases": 3360,
+        "invalidArguments": 10111,
+        "sourceSHA256": "bcaf518a4d09e08a22b377f7e630560b57577963b436180c89f671fee6d024a5",
+        "scope": "eight conversions; signed/padded strides; chunked input; reused context; exact C pixels and guards"
+      }
+    },
+    ".build/quic-audit/full-encoder.json": {
+      "sha256": "ac8a36b08bbb9fbd66d42d704ca7cb64fcdcf93045e7f484a4187c3bb54dc915",
+      "result": {
+        "encodedCases": 880,
+        "identicalCBitstreams": 880,
+        "sourceSHA256": "bcaf518a4d09e08a22b377f7e630560b57577963b436180c89f671fee6d024a5",
+        "scope": "five formats; positive/negative padded strides; one-word output; more_lines batches; exact independent C bitstreams and original pixels"
+      }
+    },
+    ".build/quic-audit/c-abi-asan.json": {
+      "sha256": "7d424b3dca5f176147a5a81934f87baeae4a4f84a5491bb572da0063c000215b",
+      "result": {
+        "identicalConsumerBytes": 15438312,
+        "consumerOutputSHA256": "2cb8068e1f97b78c41b85c31164afa4a1f56cc8aec1b06818fc571d4edec3fed",
+        "upstreamRevision": "71e45706981973014eaab3d4b533d35d79e19ffa",
+        "implementationSHA256": {
+          "codec.zig": "bcaf518a4d09e08a22b377f7e630560b57577963b436180c89f671fee6d024a5",
+          "random.zig": "274e6e3a75236f1c0d6a79689310e10ee707601a785511de45d41b34db4195a6",
+          "abi.zig": "03108e6d2023e1b300040dae704d879d450e92fbd9f0abd8ca5f531f245c8762",
+          "adapter.c": "daf965f2ce05696f6e8eade67e942767d5f05bdd8bb1b764d1187f4532a2b7d0",
+          "quic.h": "aba5d64f715eadbc0411bdc86c506b1faaf8b0a411c19325d099eebb4d958eeb",
+          "shim.h": "c9f039d7f58fa0f84a104ff15a682c506dbb022734a8d7347e379e3fceb9168c"
+        },
+        "consumerSHA256": "fccbaa3b70192874a445cc771c9d1d143ba8e55acc23f7a024059be203de176a",
+        "zigMode": "ReleaseSafe",
+        "cAddressAndUndefinedSanitizers": true,
+        "zigASanInstrumented": false,
+        "adapterASanInstrumented": true,
+        "artifactSHA256": null,
+        "scope": "same upstream-header C consumer object linked unchanged to C and Zig; pixel/guard, allocator and fatal longjmp checks"
+      }
+    },
+    ".build/quic-audit/c-abi-asan-artifact.json": {
+      "sha256": "0cdb9e3f2d0e665669d151b427f5049e711ae87ecc04c1570dd039d5db8114a2",
+      "result": {
+        "identicalConsumerBytes": 15438312,
+        "consumerOutputSHA256": "2cb8068e1f97b78c41b85c31164afa4a1f56cc8aec1b06818fc571d4edec3fed",
+        "upstreamRevision": "71e45706981973014eaab3d4b533d35d79e19ffa",
+        "implementationSHA256": {
+          "codec.zig": "bcaf518a4d09e08a22b377f7e630560b57577963b436180c89f671fee6d024a5",
+          "random.zig": "274e6e3a75236f1c0d6a79689310e10ee707601a785511de45d41b34db4195a6",
+          "abi.zig": "03108e6d2023e1b300040dae704d879d450e92fbd9f0abd8ca5f531f245c8762",
+          "adapter.c": "daf965f2ce05696f6e8eade67e942767d5f05bdd8bb1b764d1187f4532a2b7d0",
+          "quic.h": "aba5d64f715eadbc0411bdc86c506b1faaf8b0a411c19325d099eebb4d958eeb",
+          "shim.h": "c9f039d7f58fa0f84a104ff15a682c506dbb022734a8d7347e379e3fceb9168c"
+        },
+        "consumerSHA256": "fccbaa3b70192874a445cc771c9d1d143ba8e55acc23f7a024059be203de176a",
+        "zigMode": "ReleaseSafe",
+        "cAddressAndUndefinedSanitizers": true,
+        "zigASanInstrumented": false,
+        "adapterASanInstrumented": false,
+        "artifactSHA256": "ffd06e08f7f62fac7176aa9427715b6843b80221604429136c26b51417c2e43c",
+        "scope": "same upstream-header C consumer object linked unchanged to C and Zig; pixel/guard, allocator and fatal longjmp checks"
+      }
+    },
+    ".build/quic-audit/production-audit.json": {
+      "sha256": "6c773817267a389ba943e7e96664517d98d52da7cef0cef94a749ff68b36c061",
+      "result": {
+        "seed": 1910789894,
+        "buildMode": "ReleaseSafe",
+        "validImages": 840,
+        "truncatedInputs": 4198,
+        "mutatedInputs": 20000,
+        "acceptedMutations": 5567,
+        "zigSHA256": "bcaf518a4d09e08a22b377f7e630560b57577963b436180c89f671fee6d024a5",
+        "auditSHA256": "cc46103505125d0f77b465772511b1248f816a66ff674a744c247e38215c03e0",
+        "baselineSHA256": null,
+        "scope": "Independent C-encoded full pixels in five formats; production artifact versus bounded Zig entry point on truncation/mutations; guarded outputs; optional exact legacy comparison. Not exhaustive fuzzing."
+      }
+    },
+    ".build/migration/jpeg-asan.json": {
+      "sha256": "21dde3dbab745c60337983a91a5bdc18b6ede33fa8725ad3321ff2a51d5deb4a",
+      "result": {
+        "asan": true,
+        "archive_sha256": "7ffa3ac81c4e24781d21a7f481cc61bc079b00be26d4cb0a129f90f0033521e1",
+        "source_sha256": "c27ad72a68da151177929aa969ae773a2da5ac2af9ce946079314fdac8cece7f",
+        "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+        "hardware": "Apple M4 Pro",
+        "os": "27.2",
+        "cases": [
+          {
+            "width": 1,
+            "height": 1,
+            "subsampling": 0,
+            "progressive": false,
+            "jpeg_sha256": "2436255ccea1a3be48f393ecbcb34a4416ec928f1745071938c20374d72b9aa1",
+            "bgra_sha256": "1e7e47bc602be5d487d1d1574874e7b2778a1bf049ac9e57531c6de0ad301b69",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.018,
+                  "wall_ms_per_frame": 0.025
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.017,
+                  "wall_ms_per_frame": 0.018
+                }
+              ]
+            }
+          },
+          {
+            "width": 1,
+            "height": 1,
+            "subsampling": 1,
+            "progressive": false,
+            "jpeg_sha256": "0304552274d6a5621afcbd1594033a1b971e8f3cc6024aa50c867980bef5cca0",
+            "bgra_sha256": "1e7e47bc602be5d487d1d1574874e7b2778a1bf049ac9e57531c6de0ad301b69",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.017,
+                  "wall_ms_per_frame": 0.018
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.015,
+                  "wall_ms_per_frame": 0.015
+                }
+              ]
+            }
+          },
+          {
+            "width": 1,
+            "height": 1,
+            "subsampling": 2,
+            "progressive": false,
+            "jpeg_sha256": "0da7affc540268b2de1e6b285085b937b5951e11e2016a6b54b1589b304d8ef3",
+            "bgra_sha256": "1e7e47bc602be5d487d1d1574874e7b2778a1bf049ac9e57531c6de0ad301b69",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.019,
+                  "wall_ms_per_frame": 0.02
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.019,
+                  "wall_ms_per_frame": 0.019
+                }
+              ]
+            }
+          },
+          {
+            "width": 1,
+            "height": 1,
+            "subsampling": 3,
+            "progressive": false,
+            "jpeg_sha256": "26c1758a024cf8c97f8eb6f3b521551df59ecabf8b386e607577da7ddc1376ad",
+            "bgra_sha256": "374795a4cb3cefbdb718e14159ce2b34764131f942b6da57d8ce18f8a7f4eac9",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.015,
+                  "wall_ms_per_frame": 0.015
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1,
+                  "height": 1,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.017,
+                  "wall_ms_per_frame": 0.017
+                }
+              ]
+            }
+          },
+          {
+            "width": 9,
+            "height": 7,
+            "subsampling": 0,
+            "progressive": false,
+            "jpeg_sha256": "65f943bf3880d07bcbc97b8e40b303eafd434324d754e2096d5399dff439f2a3",
+            "bgra_sha256": "a83f9765c48952feafe08eab1f7a9aacab1bd6beddd051d2fb6589c5c06bee23",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.018,
+                  "wall_ms_per_frame": 0.019
+                }
+              ],
+              "neon": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.02,
+                  "wall_ms_per_frame": 0.02
+                }
+              ]
+            }
+          },
+          {
+            "width": 9,
+            "height": 7,
+            "subsampling": 1,
+            "progressive": false,
+            "jpeg_sha256": "0d92fa33b7bb7c862afdf20321bd071b32e291b1f08b01fde480242b3b5c4e8d",
+            "bgra_sha256": "9003ba07fe4fd92ccac3a4e1697ce85fca78ffaae33fa14130e83dd85241b436",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.02,
+                  "wall_ms_per_frame": 0.021
+                }
+              ],
+              "neon": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.016,
+                  "wall_ms_per_frame": 0.015
+                }
+              ]
+            }
+          },
+          {
+            "width": 9,
+            "height": 7,
+            "subsampling": 2,
+            "progressive": false,
+            "jpeg_sha256": "4aa6caf9a4ecbdce729d1d2b1847a74091f538e718f0f841c9bb941682464b22",
+            "bgra_sha256": "121355d70a85f10f617a22b0abe4716cf2ff742a65b06e03c6ff1ccbb8d90b43",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.02,
+                  "wall_ms_per_frame": 0.02
+                }
+              ],
+              "neon": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.021,
+                  "wall_ms_per_frame": 0.021
+                }
+              ]
+            }
+          },
+          {
+            "width": 9,
+            "height": 7,
+            "subsampling": 3,
+            "progressive": false,
+            "jpeg_sha256": "d3fa24c05b3d6f33bcc3da32d8de5fa6fe3575bf88058e0787aacf26e02b82c7",
+            "bgra_sha256": "ae853e23e66f4fe3244515a01a8f81c4dd75c6fe7e6cb524abb0f0b6be6cdbf1",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.017,
+                  "wall_ms_per_frame": 0.018
+                }
+              ],
+              "neon": [
+                {
+                  "width": 9,
+                  "height": 7,
+                  "stride": 64,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.015,
+                  "wall_ms_per_frame": 0.016
+                }
+              ]
+            }
+          },
+          {
+            "width": 65,
+            "height": 33,
+            "subsampling": 0,
+            "progressive": true,
+            "jpeg_sha256": "cd580a54618e6b18c758ecdc87868447dbfadaa8321e191c67016f764c2bfe20",
+            "bgra_sha256": "435ca75e512c7a6c070fc6b231c114161fb83085d0acfe302ce1adb4594a487b",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.062,
+                  "wall_ms_per_frame": 0.062
+                }
+              ],
+              "neon": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.048,
+                  "wall_ms_per_frame": 0.049
+                }
+              ]
+            }
+          },
+          {
+            "width": 65,
+            "height": 33,
+            "subsampling": 1,
+            "progressive": true,
+            "jpeg_sha256": "b5259185e6056e47670a727f85a7460c230af9fd5e7f27f5d7efeddb4704e551",
+            "bgra_sha256": "59b7347a423edff2ba28f36a7a2325fc720521160cf0803f4bc20d56cf835aa7",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.052,
+                  "wall_ms_per_frame": 0.056
+                }
+              ],
+              "neon": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.041,
+                  "wall_ms_per_frame": 0.041
+                }
+              ]
+            }
+          },
+          {
+            "width": 65,
+            "height": 33,
+            "subsampling": 2,
+            "progressive": true,
+            "jpeg_sha256": "3301edf54366f49385289ecebb07941d37269918f938588e6628eff42b54c586",
+            "bgra_sha256": "30afc04b5bbf11809b50b1da57fb8548ebf59d07ebfab49700dfc90d857b6caa",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.053,
+                  "wall_ms_per_frame": 0.053
+                }
+              ],
+              "neon": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.04,
+                  "wall_ms_per_frame": 0.04
+                }
+              ]
+            }
+          },
+          {
+            "width": 65,
+            "height": 33,
+            "subsampling": 3,
+            "progressive": true,
+            "jpeg_sha256": "4a738be6dd2b9563f7929d5e1fa5c600c6082825c26213e3c3e09fdaf2b0c76d",
+            "bgra_sha256": "5e0a0e048a156ba07f8e7c2f9291c9200956ad440dca4caf867e22e5ce1f93d2",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.03,
+                  "wall_ms_per_frame": 0.031
+                }
+              ],
+              "neon": [
+                {
+                  "width": 65,
+                  "height": 33,
+                  "stride": 320,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 0.03,
+                  "wall_ms_per_frame": 0.031
+                }
+              ]
+            }
+          },
+          {
+            "width": 1920,
+            "height": 1080,
+            "subsampling": 0,
+            "progressive": false,
+            "jpeg_sha256": "49aab576d7c07836b3700b76d8143a465d4f5d56911d0c260b79355f85527887",
+            "bgra_sha256": "3761cbc32d597611c0ad8903eb220dd0bd2f23cc73310f90431c00a9a910f055",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 20.799,
+                  "wall_ms_per_frame": 20.812
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 10.191,
+                  "wall_ms_per_frame": 10.218
+                }
+              ]
+            }
+          },
+          {
+            "width": 1920,
+            "height": 1080,
+            "subsampling": 1,
+            "progressive": false,
+            "jpeg_sha256": "bc46a831fa33af3b6bd312cb316a9c41aaababfbd06b7274a69f2f033b8550e2",
+            "bgra_sha256": "9fba79f61435cf4849ba91c5930d5531b54d48b07495d4b115d9a3f3aff68dec",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 16.957,
+                  "wall_ms_per_frame": 16.999
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 7.542,
+                  "wall_ms_per_frame": 7.561
+                }
+              ]
+            }
+          },
+          {
+            "width": 1920,
+            "height": 1080,
+            "subsampling": 2,
+            "progressive": false,
+            "jpeg_sha256": "5ea5924b11180cc7636c4608b4ab3e889bf6c03f6d47cfa93ae8bf18eba89c67",
+            "bgra_sha256": "82158588ab1cd16dbe3877863c25da7b2b2e16c9fb51ecbc2cfb2b9f683dcb75",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 14.656,
+                  "wall_ms_per_frame": 14.692
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 5.876,
+                  "wall_ms_per_frame": 5.881
+                }
+              ]
+            }
+          },
+          {
+            "width": 1920,
+            "height": 1080,
+            "subsampling": 3,
+            "progressive": false,
+            "jpeg_sha256": "b03ff94a700de38ed854b2251f1945c640f29210758e73d504ed7e1578141a1d",
+            "bgra_sha256": "1e1d3f54b2b8eb50c87aae4760c3b5dba26ffd0ff229af68c1748d5cbaf13c81",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 5.695,
+                  "wall_ms_per_frame": 5.714
+                }
+              ],
+              "neon": [
+                {
+                  "width": 1920,
+                  "height": 1080,
+                  "stride": 7680,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 4.368,
+                  "wall_ms_per_frame": 4.378
+                }
+              ]
+            }
+          },
+          {
+            "width": 3840,
+            "height": 2160,
+            "subsampling": 0,
+            "progressive": false,
+            "jpeg_sha256": "0d02b4f6cfc07acc4807940b5f946e8a6ce2d582c1d0c51a1fab172ff1d0f234",
+            "bgra_sha256": "78a6e8a9b329116aeee161b73441cf42103f4f0ef641c4a11a24552f4f4cbff1",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 86.76,
+                  "wall_ms_per_frame": 87.708
+                }
+              ],
+              "neon": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 40.894,
+                  "wall_ms_per_frame": 40.962
+                }
+              ]
+            }
+          },
+          {
+            "width": 3840,
+            "height": 2160,
+            "subsampling": 1,
+            "progressive": false,
+            "jpeg_sha256": "4e505ee3338b4ca5e9380425980cd83d43a39adca6aab6aa270047cb180c1294",
+            "bgra_sha256": "bac33cb1a94073be8d5afc65ce68826687e3d56ca7a4c843068d5d05006524f0",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 67.311,
+                  "wall_ms_per_frame": 67.376
+                }
+              ],
+              "neon": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 30.155,
+                  "wall_ms_per_frame": 30.202
+                }
+              ]
+            }
+          },
+          {
+            "width": 3840,
+            "height": 2160,
+            "subsampling": 2,
+            "progressive": false,
+            "jpeg_sha256": "ddbc968614121dbfac91e21630ab487507f222b0f92c875b13215fccfbfcb0bc",
+            "bgra_sha256": "6bd422aa0dc93cba83d9569d383234a85614ec4cfba0aaeb6ec242d3b3a70b22",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 57.861,
+                  "wall_ms_per_frame": 57.946
+                }
+              ],
+              "neon": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 23.288,
+                  "wall_ms_per_frame": 23.366
+                }
+              ]
+            }
+          },
+          {
+            "width": 3840,
+            "height": 2160,
+            "subsampling": 3,
+            "progressive": false,
+            "jpeg_sha256": "be5fe8d7e98ab164188e3eafeaeb7907a2cf20563de4fba55c1a90e1ab9eb385",
+            "bgra_sha256": "b00ce915129c1c1c0290981779bd3dace194426edfeea9eac20b9c7fe021551f",
+            "bit_exact": true,
+            "samples": {
+              "scalar": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 23.259,
+                  "wall_ms_per_frame": 23.37
+                }
+              ],
+              "neon": [
+                {
+                  "width": 3840,
+                  "height": 2160,
+                  "stride": 15360,
+                  "frames": 1,
+                  "cpu_ms_per_frame": 17.373,
+                  "wall_ms_per_frame": 17.379
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    ".build/zig-package-consumers/agent.json": {
+      "sha256": "31636e5a8741221f43ec1153223224ce6214af532659cec6a1e01eb7467c23eb",
+      "result": {
+        "instrumentation": "SwiftPM Release; Swift/C/ObjC not sanitizer-instrumented; Zig ReleaseSafe",
+        "result": "passed",
+        "checks": [
+          "Agent starts after buffered peer capabilities",
+          "disabled clipboard never advertised; explicit publish and sync remain disabled",
+          "exact monitor layout and acknowledgement",
+          "regular file exact bytes, native size errors, identity across stop/start",
+          "cancelled and completed reconnect boundary waits; cumulative native diagnostics"
+        ],
+        "host_effects": "owned temporary files read only; general pasteboard synchronization disabled"
+      }
+    },
+    ".build/zig-package-consumers/audio.json": {
+      "sha256": "49f7a91d55a5337e69939ab06afd9113d349d66aa051eb6223335b504bfd42ea",
+      "result": {
+        "result": "passed",
+        "checks": [
+          "late native audio attachment with public event synchronization",
+          "40 ordered controls per reconnect without unused Swift stream overflow",
+          "duplicate start, detach and reacquire",
+          "no START sent; no speaker or microphone opened"
+        ],
+        "instrumentation": "SwiftPM Release; Swift/C/ObjC not sanitizer-instrumented; Zig ReleaseSafe"
+      }
+    },
+    ".build/zig-package-consumers/native.json": {
+      "sha256": "91a7c6fbcf3f6b3e77c2ebaa3d6797ad688e38649e364ddc198612786a21f6c7",
+      "result": {
+        "instrumentation": "SwiftPM Release; Swift/C/ObjC not sanitizer-instrumented; Zig ReleaseSafe",
+        "result": "passed",
+        "checks": [
+          "bundled compositor discovered by public default initializer",
+          "actual MJPEG IOSurface and exact independent decoded pixels",
+          "equality does not read back; concurrent Swift pixels materialize once",
+          "mutable Data cannot alter native frame",
+          "pipeline and Source metric conversion and reconnect reset",
+          "H264/H265 failure preserves codec and signed native status"
+        ],
+        "not_claimed": [
+          "successful H264/H265 hardware decoding",
+          "onscreen presentation"
+        ]
+      }
+    },
+    ".build/zig-package-consumers/session.json": {
+      "sha256": "9c87af6a8189d6df7f57f07c638df4c9f94ee8a5e55dec109d1ef714cb21f496",
+      "result": {
+        "result": "passed",
+        "checks": [
+          "Swift 6 strict concurrency and warnings-as-errors, no legacy Swift core imports",
+          "public async connect, failed authentication recovery and duplicate connect rejection",
+          "same Source subscription across reconnect and terminal clear",
+          "cancelled iterator and blocked Link connect join before reuse",
+          "typed Input exact wire bytes",
+          "retained frame concurrent pixels after Session and subscription destruction"
+        ],
+        "instrumentation": "SwiftPM Release; Swift/C/ObjC not sanitizer-instrumented; Zig ReleaseSafe"
+      }
+    },
+    ".build/zig-package-consumers/usb.json": {
+      "sha256": "2d032e42f083df7e729160e516bc3ebf29ed91ec22ce5816feb96e1006f51a03",
+      "result": {
+        "instrumentation": "SwiftPM Release; Swift/C/ObjC not sanitizer-instrumented; Zig ReleaseSafe",
+        "result": "passed",
+        "checks": [
+          "existing standalone parser prefix survives attachment",
+          "exact 8-byte packet limits and 40 native replies per connection",
+          "caller release while attached and retained host after disconnect",
+          "missing channel, duplicate host and pump timeout errors",
+          "same Session reconnects with joined backend teardown"
+        ],
+        "hardware": "no physical USB device selected"
+      }
+    },
+    ".build/zig-package-consumers/webdav.json": {
+      "sha256": "fdc03b5271158464c81ad59e8659097c0058120971da0f1868ca9030516d5411",
+      "result": {
+        "instrumentation": "SwiftPM Release; Swift/C/ObjC not sanitizer-instrumented; Zig ReleaseSafe",
+        "result": "passed",
+        "checks": [
+          "same server across standalone calls and two attached channels",
+          "parser prefix, shared client bound, mixed client rejection and failed attachment rollback",
+          "70 exact routed replies without unused public queue overflow",
+          "read-only policy, escaping symlink denial and explicit write opt-in",
+          "caller release while attached and retained server after reconnect",
+          "70-request synchronous batch and typed header/body errors"
+        ],
+        "host_effects": "owned temporary directory only"
+      }
+    }
+  }
+}

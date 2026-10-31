@@ -1,0 +1,5 @@
+{
+  "path": "/Users/beribeli/Workarea/spice-mac",
+  "head": "6d31b114e145e4c0fcaf18f955be03ab927cc16b",
+  "status": " M .github/workflows/ci.yml\n M CHANGELOG.md\n M CONTRIBUTING.md\n M Package.resolved\n M Package.swift\n M Packages/SpiceSessionLogic/Package.swift\n M Packages/VVConfig/Package.swift\n M README.md\n M THIRD-PARTY-LICENSES.txt\n M scripts/build-app.sh\n M scripts/doctor.sh\n?? docs/\n"
+}

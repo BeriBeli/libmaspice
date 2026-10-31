@@ -1,0 +1,13 @@
+module CSpiceZig {
+    header "spice_zig.h"
+    header "spice_zig_desktop.h"
+    header "spice_zig_source.h"
+    header "spice_zig_pipeline.h"
+    header "spice_zig_diagnostics.h"
+    header "spice_zig_host_view.h"
+    header "spice_zig_audio.h"
+    header "spice_zig_agent.h"
+    header "spice_zig_usb.h"
+    header "spice_zig_webdav.h"
+    export *
+}

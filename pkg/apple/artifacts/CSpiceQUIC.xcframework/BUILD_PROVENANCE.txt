@@ -1,0 +1,16 @@
+Implementation: pkg/quic; production Zig codec plus thin C ABI/error adapter
+Upstream: spice-common 71e45706981973014eaab3d4b533d35d79e19ffa
+Source: https://gitlab.freedesktop.org/spice/spice-common/-/archive/71e45706981973014eaab3d4b533d35d79e19ffa/spice-common-71e45706981973014eaab3d4b533d35d79e19ffa.tar.gz
+Upstream archive SHA-256: f5cf6afab9a224fc34ff7cd578897a5769ac80aeeff54ddc937506de4628d69e
+Configuration: Zig 0.17.0 ReleaseSafe; arm64; macOS=26.0; C/ObjC -O2 -Wall -Wextra -Werror; deterministic archive
+Apple clang version 21.0.0 (clang-2100.4.1.1)
+macOS SDK: 27.2
+Owned source SHA-256: bcaf518a4d09e08a22b377f7e630560b57577963b436180c89f671fee6d024a5 pkg/quic/codec.zig
+Owned source SHA-256: 274e6e3a75236f1c0d6a79689310e10ee707601a785511de45d41b34db4195a6 pkg/quic/random.zig
+Owned source SHA-256: 03108e6d2023e1b300040dae704d879d450e92fbd9f0abd8ca5f531f245c8762 pkg/quic/abi.zig
+Owned source SHA-256: daf965f2ce05696f6e8eade67e942767d5f05bdd8bb1b764d1187f4532a2b7d0 pkg/quic/adapter.c
+Owned source SHA-256: aba5d64f715eadbc0411bdc86c506b1faaf8b0a411c19325d099eebb4d958eeb pkg/quic/quic.h
+Owned source SHA-256: c9f039d7f58fa0f84a104ff15a682c506dbb022734a8d7347e379e3fceb9168c pkg/quic/shim.h
+Owned source SHA-256: 592987e8510228d546540b84a22444bde98e48d03078d3b2eefcd889bec5ce8c pkg/quic/COPYING
+Owned source SHA-256: 5c537d6853e005298a285d508cff9ac7192cea23576c840d485b2b586a7ff177 pkg/quic/ZIG-LICENSE
+Archive SHA-256: ffd06e08f7f62fac7176aa9427715b6843b80221604429136c26b51417c2e43c

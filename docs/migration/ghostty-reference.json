@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/ghostty-org/ghostty",
+  "commit": "fbed180a5f181915c92a8f2f561903a6e4645b5a",
+  "retrieved_date": "2026-10-31",
+  "files_read_sha256": {
+    "build.zig": "f6da05257b7ed00556019554acde8470c9b5343601a310df48a138becc7c205d",
+    "build.zig.zon": "82edc931dcc3c0f6a7f2213157b0667040c0314be7f283b7bb1fb2a265f5df6b",
+    "src/build/GhosttyLibVt.zig": "4aa4a31ba40a703aac13fd59f1d403dba9188904f7d2538413c7d475d719f510",
+    "src/build/MetallibStep.zig": "231861faa7759fda638f62f1ba0addaabe85ba86a54021b82967721d8ab9409e",
+    "src/build/GhosttyXCFramework.zig": "dfc308049d7ed12e225a09310ca502650765de15ef537bac292c83117b859849",
+    "pkg/README.md": "585652ca8404e66afcbad397f4e6648316738d299cc52054573f4e378c40a067",
+    "test/README.md": "7a3db47fdb8d1806668d0153374c735796cab2605bace0f8859daf59728d98af",
+    "include/module.modulemap": "89611e758f375e218a49fd4f07919b708d240138149f6398425664b72b37d8d5"
+  },
+  "adaptation": "Root Zig graph and manifest, src/build, include, pkg, test, platform and resource boundaries; no Ghostty implementation copied"
+}

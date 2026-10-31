@@ -1,0 +1,7 @@
+.{
+    .name = .libmaspice,
+    .fingerprint = 0x82d58af404f871c2,
+    .version = "0.1.0-dev",
+    .minimum_zig_version = "0.17.0",
+    .paths = .{ "build.zig", "build.zig.zon", "src", "include", "pkg", "bindings", "resources", "tools", "test", "docs", "Package.swift", "LICENSE", "THIRD_PARTY_NOTICES.md", "README.md" },
+}
